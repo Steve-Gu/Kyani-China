@@ -1,0 +1,469 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="zh-CN" prefix="og: http://ogp.me/ns#">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="show-menu-auto-arrows" content="0" />
+<meta name="show-menu-drop-shadows" content="1" />
+<meta name="google-site-verification" content="Bu7FHKTF6SSqHfhDc-Tj5NHjDls4SFMwYfbcwu9L2IE" />
+<meta name="msvalidate.01" content="EAB7E791BFBF8B6A1EAFB4B5DA973C7A" />
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script type='text/javascript' src='http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/scripts/cbox/js/jquery.colorbox.js'></script>
+<script type="text/javascript" src="http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/scripts/coinslider/coin-slider.min.js"></script>
+
+<script type="text/javascript">
+function H$(i) {return document.getElementById(i)}
+function H$$(c, p) {return p.getElementsByTagName(c)}
+var slider = function () {
+	function init (o) {
+		this.id = o.id;
+		this.at = o.auto ? o.auto : 3;
+		this.o = 0;
+		this.pos();
+	}
+	init.prototype = {
+		pos : function () {
+			clearInterval(this.__b);
+			this.o = 0;
+			var el = H$(this.id), li = H$$('li', el), l = li.length;
+			var _t = li[l-1].offsetHeight;
+			var cl = li[l-1].cloneNode(true);
+			cl.style.opacity = 0; cl.style.filter = 'alpha(opacity=0)';
+			el.insertBefore(cl, el.firstChild);
+			el.style.top = -_t + 'px';
+			this.anim();
+		},
+		anim : function () {
+			var _this = this;
+			this.__a = setInterval(function(){_this.animH()}, 20);
+		},
+		animH : function () {
+			var _t = parseInt(H$(this.id).style.top), _this = this;
+			if (_t >= -1) {
+				clearInterval(this.__a);
+				H$(this.id).style.top = 0;
+				var list = H$$('li',H$(this.id));
+				H$(this.id).removeChild(list[list.length-1]);
+				this.__c = setInterval(function(){_this.animO()}, 20);
+				//this.auto();
+			}else {
+				var __t = Math.abs(_t) - Math.ceil(Math.abs(_t)*.07);
+				H$(this.id).style.top = -__t + 'px';
+			}
+		},
+		animO : function () {
+			this.o += 2;
+			if (this.o == 100) {
+				clearInterval(this.__c);
+				H$$('li',H$(this.id))[0].style.opacity = 1;
+				H$$('li',H$(this.id))[0].style.filter = 'alpha(opacity=100)';
+				this.auto();
+			}else {
+				H$$('li',H$(this.id))[0].style.opacity = this.o/100;
+				H$$('li',H$(this.id))[0].style.filter = 'alpha(opacity='+this.o+')';
+			}
+		},
+		auto : function () {
+			var _this = this;
+			this.__b = setInterval(function(){_this.pos()}, this.at*1000);
+		}
+	}
+	return init;
+}();
+</script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+	//Examples of how to assign the ColorBox event to elements
+	$(".group1").colorbox({rel:'group1'});
+	$(".group2").colorbox({rel:'group2', transition:"fade"});
+	$(".group3").colorbox({rel:'group3', transition:"none", width:"75%", height:"75%"});
+	$(".group4").colorbox({rel:'group4', slideshow:true});
+	$(".ajax").colorbox();
+	$(".youtube").colorbox({iframe:true, innerWidth:"80%", innerHeight:"70%"});
+	$(".iframe").colorbox({iframe:true, width:"80%", height:"80%"});
+	$(".inline").colorbox({inline:true, width:"50%", height:"100%"});
+	$(".callbacks").colorbox({
+	onOpen:function(){ alert('onOpen: colorbox is about to open'); },
+	onLoad:function(){ alert('onLoad: colorbox has started to load the targeted content'); },
+	onComplete:function(){ alert('onComplete: colorbox has displayed the loaded content'); },
+	onCleanup:function(){ alert('onCleanup: colorbox has begun the close process'); },
+	onClosed:function(){ alert('onClosed: colorbox has completely closed'); }
+	});
+	//Example of preserving a JavaScript event for inline calls.
+	$("#click").click(function(){
+	$('#click').css({"background-color":"#f00", "color":"#fff", "cursor":"inherit"}).text("Open this window again and this message will still be here.");
+	return false;
+	});
+	}); 
+</script><link rel="stylesheet" href="http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/scripts/cbox/colorbox.css" />
+<link rel="pingback" href="http://www.hykyani.com/hykyani.com/xmlrpc.php" />
+<link rel="stylesheet" href="http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/scripts/coinslider/coin-slider-styles.css" type="text/css" />
+<link rel="icon" href="http://www.hykyani.com/hykyani.com/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="http://www.hykyani.com/hykyani.com/favicon.ico" type="image/x-icon">
+
+
+<!--[if IE 6]>
+    <script  type="text/javascript" src="http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/scripts/DD_belatedPNG_0.0.8a-min.js"></script>
+    <script  type="text/javascript">
+    // <![CDATA[
+	DD_belatedPNG.fix('.pngfix, img, #home-page-content li, #page-content li, #bottom li, #footer li, #recentcomments li span');
+    // ]]>
+    </script>
+<![endif]-->
+
+
+<!-- This site is optimized with the Yoast WordPress SEO plugin v1.4.4 - http://yoast.com/wordpress/seo/ -->
+<title>您的健康面临威胁</title>
+<meta name="description" content="您的健康面临威胁？我明白这是一个骇人听闻的说词，不过只要您听完以下的说明﹐就会了解为何我会引用这样一个主题。在接下来的几分钟时间里，我想和诸位分享来自健康科学的尖端领域里的一些惊人研究以及一些鲜为人知的保健秘决，这些珍贵的信息足以使您在自己的生命中多享受几年的健康生活。我叫罗伯特•艾伦（Robert Allen），不过，我可不是医生喔！实际上，我是一位热门畅销书作家。我的两本著作：《无事不成》与《创造财富》都曾登上畅销排行榜的榜首。坦白说，在四年前，我对于保健方面的常识可以说还几乎一无所知，也因此，自己开始进行了一些这方面的研究。在研究的过程中，我研读了数十本的书籍以及最新的研究报告，并且把研究所得的精华部分编撰成一份内容生动的特别报告。"/>
+<meta name="keywords" content="健康因素,癌怎么治,营养补充品,营养品"/>
+<link rel="canonical" href="http://www.hykyani.com/archives/2209" />
+<meta property='og:locale' content='zh_CN'/>
+<meta property='og:title' content='您的健康面临威胁'/>
+<meta property='og:description' content='您的健康面临威胁？我明白这是一个骇人听闻的说词，不过只要您听完以下的说明﹐就会了解为何我会引用这样一个主题。在接下来的几分钟时间里，我想和诸位分享来自健康科学的尖端领域里的一些惊人研究以及一些鲜为人知的保健秘决，这些珍贵的信息足以使您在自己的生命中多享受几年的健康生活。我叫罗伯特•艾伦（Robert Allen），不过，我可不是医生喔！实际上，我是一位热门畅销书作家。我的两本著作：《无事不成》与《创造财富》都曾登上畅销排行榜的榜首。坦白说，在四年前，我对于保健方面的常识可以说还几乎一无所知，也因此，自己开始进行了一些这方面的研究。在研究的过程中，我研读了数十本的书籍以及最新的研究报告，并且把研究所得的精华部分编撰成一份内容生动的特别报告。'/>
+<meta property='og:url' content='http://www.hykyani.com/archives/2209'/>
+<meta property='og:site_name' content='Kyani金三角健康俱乐部 - 助您体验新的人生！'/>
+<meta property='og:type' content='article'/>
+<meta property='og:image' content='http://i1162.photobucket.com/albums/q529/hykyanicom/allen_zpsce3da0d9.jpg'/>
+<!-- / Yoast WordPress SEO plugin. -->
+
+<link rel='stylesheet' id='rs-settings-css'  href='http://www.hykyani.com/hykyani.com/wp-content/plugins/revslider/rs-plugin/css/settings.css?ver=3.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='rs-captions-css'  href='http://www.hykyani.com/hykyani.com/wp-content/plugins/revslider/rs-plugin/css/captions.css?ver=3.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-pagenavi-css'  href='http://www.hykyani.com/hykyani.com/wp-content/plugins/wp-pagenavi/pagenavi-css.css?ver=2.70' type='text/css' media='all' />
+<link rel='stylesheet' id='ubermenu-basic-css'  href='http://www.hykyani.com/hykyani.com/wp-content/plugins/ubermenu/styles/basic.css?ver=2.2.2.0' type='text/css' media='all' />
+<link rel='stylesheet' id='reset-css'  href='http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/styles/common-css/reset.css?ver=1.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='text-css'  href='http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/styles/style1/css/text.css?ver=1.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='grid-960-css'  href='http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/styles/common-css/960.css?ver=1.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='superfish_menu-css'  href='http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/scripts/superfish-1.4.8/css/superfish.css?ver=1.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='style-css'  href='http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/styles/style1/css/style.css?ver=1.9.1' type='text/css' media='screen' />
+<link rel='stylesheet' id='custom-style-css'  href='http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/styles/custom/custom_style.php?ver=3.4.2' type='text/css' media='screen' />
+<link rel='stylesheet' id='style-orig-css'  href='http://www.hykyani.com/hykyani.com/wp-content/themes/u-design-child/style.css?ver=1.0' type='text/css' media='screen' />
+<script type="text/javascript">
+var duoshuoQuery = {"short_name":"hykyani","sso":{"login":"http:\/\/www.hykyani.com\/hykyani.com\/wp-login.php?action=duoshuo_login","logout":"http:\/\/www.hykyani.com\/hykyani.com\/wp-login.php?action=logout&_wpnonce=33b0d005cf"},"remote_auth":"W10= 200ec2ff6dff58583da137913667b2ac17ebee51 1364046322"};
+duoshuoQuery.sso.login += '&redirect_to=' + encodeURIComponent(window.location.href);
+duoshuoQuery.sso.logout += '&redirect_to=' + encodeURIComponent(window.location.href);
+</script>
+<script type='text/javascript' src='http://www.hykyani.com/hykyani.com/wp-includes/js/jquery/jquery.js?ver=1.7.2'></script>
+<script type='text/javascript' src='http://www.hykyani.com/hykyani.com/wp-includes/js/comment-reply.js?ver=3.4.2'></script>
+<script type='text/javascript' src='http://www.hykyani.com/hykyani.com/wp-content/plugins/revslider/rs-plugin/js/jquery.themepunch.plugins.min.js?ver=3.4.2'></script>
+<script type='text/javascript' src='http://www.hykyani.com/hykyani.com/wp-content/plugins/revslider/rs-plugin/js/jquery.themepunch.revolution.min.js?ver=3.4.2'></script>
+<script type='text/javascript' src='http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/scripts/superfish-1.4.8/js/superfish.combined.js?ver=1.0.0'></script>
+<script type='text/javascript' src='http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/scripts/script.js?ver=1.0'></script>
+<script type='text/javascript' src='http://static.duoshuo.com/embed.js'></script>
+
+<!-- UberMenu CSS - Controlled through UberMenu Options Panel 
+================================================================ -->
+<style type="text/css" id="ubermenu-style-generator-css">
+/* Style Generator Styles */
+#megaMenu {
+  border:none;
+  border-bottom:;
+  background-color:transparent;
+  background:-webkit-gradient(linear,left top,left bottom,from(transparent),to(transparent));
+  background:-webkit-linear-gradient(top,transparent,transparent);
+  background:-moz-linear-gradient(top,transparent,transparent);
+  background:-ms-linear-gradient(top,transparent,transparent);
+  background:-o-linear-gradient(top,transparent,transparent);
+  -webkit-border-radius:0px;
+  -moz-border-radius:0px;
+  border-radius:0px;
+  -moz-background-clip:padding;
+  -webkit-background-clip:padding-box;
+  background-clip:padding-box;
+  -webkit-box-shadow:inset 0px 1px 0px 0px rgba(255,255,255,0.9);
+  -moz-box-shadow:inset 0px 1px 0px 0px rgba(255,255,255,0.9);
+  box-shadow:inset 0px 1px 0px 0px rgba(255,255,255,0.9);
+}
+#megaMenu ul.megaMenu > li > a, #megaMenu ul.megaMenu > li > span.um-anchoremulator {
+  font-size:14px;
+  color:#555555;
+  padding:16px 18px;
+  font-weight:normal;
+}
+#megaMenu.megaMenuHorizontal ul.megaMenu > li > a, #megaMenu.megaMenuHorizontal ul.megaMenu > li > span.um-anchoremulator {
+  border-left:1px solid transparent;
+  -webkit-box-shadow:inset 1px 0px 0px 0px rgba(255,255,255,0.9);
+  -moz-box-shadow:inset 1px 0px 0px 0px rgba(255,255,255,0.9);
+  box-shadow:inset 1px 0px 0px 0px rgba(255,255,255,0.9);
+}
+#megaMenu.megaMenuVertical ul.megaMenu > li > a, #megaMenu.megaMenuVertical ul.megaMenu > li > span.um-anchoremulator {
+  border-top:1px solid transparent;
+  -webkit-box-shadow:inset 0px 1px 0px 0px rgba(255,255,255,0.9);
+  -moz-box-shadow:inset 0px 1px 0px 0px rgba(255,255,255,0.9);
+  box-shadow:inset 0px 1px 0px 0px rgba(255,255,255,0.9);
+}
+#megaMenu ul li.ss-nav-menu-reg li.megaReg-with-sub > a, #megaMenu ul li.ss-nav-menu-reg li.megaReg-with-sub > span.um-anchoremulator, #megaMenu ul li.mega-with-sub > a, #megaMenu ul li.mega-with-sub > span.um-anchoremulator, #megaMenu ul li.ss-nav-menu-mega > a, #megaMenu ul li.ss-nav-menu-mega > span.um-anchoremulator { padding-right:23px; }
+#megaMenu ul.megaMenu > li > a span.wpmega-link-title, #megaMenu ul.megaMenu > li > span.um-anchoremulator span.wpmega-link-title {
+  text-transform:none;
+  text-shadow:0 -1px 1px transparent;
+}
+#megaMenu ul.megaMenu > li:hover > a, #megaMenu ul.megaMenu > li > a:hover, #megaMenu ul.megaMenu > li.megaHover > a, #megaMenu ul.megaMenu > li:hover > span.um-anchoremulator, #megaMenu ul.megaMenu > li > span.um-anchoremulator:hover, #megaMenu ul.megaMenu > li.megaHover > span.um-anchoremulator {
+  color:#aaaaaa aa !important;
+  border-bottom-color:transparent !important;
+  background-color:transparent;
+  background:-webkit-gradient(linear,left top,left bottom,from(transparent),to(transparent));
+  background:-webkit-linear-gradient(top,transparent,transparent);
+  background:-moz-linear-gradient(top,transparent,transparent);
+  background:-ms-linear-gradient(top,transparent,transparent);
+  background:-o-linear-gradient(top,transparent,transparent);
+  -webkit-box-shadow:inset 1px 1px 0px 0px rgba(255,255,255,0.9);
+  -moz-box-shadow:inset 1px 1px 0px 0px rgba(255,255,255,0.9);
+  box-shadow:inset 1px 1px 0px 0px rgba(255,255,255,0.9);
+}
+#megaMenu ul.megaMenu > li:hover > a span.wpmega-link-title, #megaMenu ul.megaMenu > li:hover > span.um-anchoremulator span.wpmega-link-title, #megaMenu ul.megaMenu > li > a:hover span.wpmega-link-title, #megaMenu ul.megaMenu > li > span.um-anchoremulator:hover span.wpmega-link-title, #megaMenu ul.megaMenu > li.megaHover > a span.wpmega-link-title, #megaMenu ul.megaMenu > li.megaHover > span.um-anchoremulator span.wpmega-link-title { text-shadow:0 -1px 1px transparent; }
+#megaMenu ul.megaMenu > li.current-menu-item > a, #megaMenu ul.megaMenu > li.current-menu-parent > a, #megaMenu ul.megaMenu > li.current-menu-ancestor > a { color:#000000; }
+#megaMenu ul.megaMenu > li.ss-nav-menu-mega > ul.sub-menu-1, #megaMenu ul.megaMenu li.ss-nav-menu-reg ul.sub-menu {
+  border-color:transparent;
+  color:#000000;
+  text-shadow:0px 1px 1px transparent;
+  -webkit-box-shadow:1px 1px 1px transparent;
+  -moz-box-shadow:1px 1px 1px transparent;
+  box-shadow:1px 1px 1px transparent;
+  background-color:#f9f9f9;
+  background:-webkit-gradient(linear,left top,left bottom,from(#f9f9f9),to(#f9f9f9));
+  background:-webkit-linear-gradient(top,#f9f9f9,#f9f9f9);
+  background:-moz-linear-gradient(top,#f9f9f9,#f9f9f9);
+  background:-ms-linear-gradient(top,#f9f9f9,#f9f9f9);
+  background:-o-linear-gradient(top,#f9f9f9,#f9f9f9);
+}
+#megaMenu ul.megaMenu ul.sub-menu .wpmega-postlist a { color:#000000; }
+#megaMenu.megaMenuHorizontal ul.megaMenu > li.ss-nav-menu-mega > ul.sub-menu-1, #megaMenu.megaMenuHorizontal ul.megaMenu li.ss-nav-menu-reg > ul.sub-menu { border-top:; }
+#megaMenu ul.megaMenu > li.ss-nav-menu-mega > ul.sub-menu-1 > li { min-width:100px; }
+#megaMenu ul li.ss-nav-menu-mega ul.sub-menu-1 > li > a, #megaMenu ul li.ss-nav-menu-mega ul.sub-menu-1 > li:hover > a, #megaMenu ul li.ss-nav-menu-mega ul ul.sub-menu .ss-nav-menu-header > a, #megaMenu ul li.ss-nav-menu-mega ul.sub-menu-1 > li > span.um-anchoremulator, #megaMenu ul li.ss-nav-menu-mega ul ul.sub-menu .ss-nav-menu-header > span.um-anchoremulator, .wpmega-widgetarea h2.widgettitle {
+  color:#777777;
+  font-size:14px;
+  font-weight:bold;
+  text-shadow:0px 1px 1px transparent;
+  padding-bottom:.4em;
+  border-bottom:1px dotted transparent;
+  margin-bottom:.6em;
+}
+#megaMenu ul li.ss-nav-menu-mega ul.sub-menu-1 > li:hover > a { color:#777777; }
+#megaMenu ul li.ss-nav-menu-mega ul ul.sub-menu li > a, #megaMenu ul li.ss-nav-menu-mega ul ul.sub-menu li > span.um-anchoremulator, #megaMenu ul ul.sub-menu li > a, #megaMenu ul ul.sub-menu li > span.um-anchoremulator {
+  color:#888888;
+  font-size:14px;
+  text-shadow:0px 1px 1px transparent;
+  background-color:transparent;
+}
+#megaMenu ul li.ss-nav-menu-mega ul ul.sub-menu li a:hover, #megaMenu ul ul.sub-menu > li:hover > a {
+  color:#000000;
+  background-color:transparent;
+}
+#megaMenu ul.megaMenu > li.menu-item > .wpmega-nonlink > form#searchform { padding-top:6px; }
+#megaMenu ul.megaMenu li.menu-item.ss-nav-menu-highlight > a, #megaMenu ul.megaMenu li.menu-item.ss-nav-menu-highlight > span.um-anchoremulator { color:#8f0000 !important; }
+#megaMenu .ss-nav-menu-with-img > a > .wpmega-link-title, #megaMenu .ss-nav-menu-with-img > a > .wpmega-link-description, #megaMenu .ss-nav-menu-with-img > a > .wpmega-item-description, #megaMenu .ss-nav-menu-with-img > span.um-anchoremulator > .wpmega-link-title, #megaMenu .ss-nav-menu-with-img > span.um-anchoremulator > .wpmega-link-description, #megaMenu .ss-nav-menu-with-img > span.um-anchoremulator > .wpmega-item-description { padding-left:30px; }
+.ss-nav-menu-with-img { min-height:25px; }
+#megaMenu ul.megaMenu li a span.wpmega-item-description, #megaMenu ul.megaMenu li span.um-anchoremulator span.wpmega-item-description {
+  font-size:10px;
+  line-height:1.4em;
+  color:#bbbbbb;
+  text-transform:none;
+}
+#megaMenu ul li.mega-with-sub > a:after, #megaMenu ul li.ss-nav-menu-mega > a:after, #megaMenu ul li.mega-with-sub > span.um-anchoremulator:after, #megaMenu ul li.ss-nav-menu-mega > span.um-anchoremulator:after { border-top-color:#888888; }
+#megaMenu ul li.ss-nav-menu-reg li.megaReg-with-sub > a:after, #megaMenu ul li.ss-nav-menu-reg li.megaReg-with-sub > span.um-anchoremulator:after { border-left-color:transparent; }
+#megaMenu .wpmega-divider {
+  border-top:1px solid transparent;
+  border-bottom:1px solid rgba(255,255,255,0.05);
+}
+#megaMenu.megaMenuVertical > ul > li > a, #megaMenu.megaMenuVertical > ul > li > span.um-anchoremulator {
+  background-color:transparent;
+  background:-webkit-gradient(linear,left top,left bottom,from(transparent),to(transparent));
+  background:-webkit-linear-gradient(top,transparent,transparent);
+  background:-moz-linear-gradient(top,transparent,transparent);
+  background:-ms-linear-gradient(top,transparent,transparent);
+  background:-o-linear-gradient(top,transparent,transparent);
+}
+#megaMenu.megaMenuVertical ul li.ss-nav-menu-reg li.megaReg-with-sub > a:after, #megaMenu.megaMenuVertical ul li.mega-with-sub > a:after, #megaMenu.megaMenuVertical ul li.ss-nav-menu-mega > a:after, #megaMenu.megaMenuVertical ul li.ss-nav-menu-reg li.megaReg-with-sub > span.um-anchoremulator:after, #megaMenu.megaMenuVertical ul li.mega-with-sub > span.um-anchoremulator:after, #megaMenu.megaMenuVertical ul li.ss-nav-menu-mega > span.um-anchoremulator:after { border-left-color:#888888; }
+#megaMenu.megaMenuVertical ul.megaMenu > li.ss-nav-menu-mega > ul.sub-menu-1, #megaMenu.megaMenuVertical ul.megaMenu li.ss-nav-menu-reg > ul.sub-menu { border-left:; }
+#megaMenu.megaMenuHorizontal ul.megaMenu { *border-bottom:none; }
+#megaMenu.megaMenuVertical ul.megaMenu { *border-right:none; }
+
+
+
+/* Image Text Padding */
+#megaMenu .ss-nav-menu-with-img > a > .wpmega-link-title, #megaMenu .ss-nav-menu-with-img > a > .wpmega-link-description, #megaMenu .ss-nav-menu-with-img > a > .wpmega-item-description, #megaMenu .ss-nav-menu-with-img > span.um-anchoremulator > .wpmega-link-title, #megaMenu .ss-nav-menu-with-img > span.um-anchoremulator > .wpmega-link-description, #megaMenu .ss-nav-menu-with-img > span.um-anchoremulator > .wpmega-item-description{
+  padding-left: 32px;
+}	
+</style>
+<!-- end UberMenu CSS -->
+		
+			
+<!--[if lte IE 9]>
+    <link rel="stylesheet" href="http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/styles/common-css/ie-all.css" media="screen" type="text/css" />
+<![endif]-->
+<!--[if lte IE 7]>
+    <link rel="stylesheet" href="http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/styles/common-css/ie6-7.css" media="screen" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+    <link rel="stylesheet" href="http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/styles/common-css/ie6.css" media="screen" type="text/css" />
+    <style type="text/css">
+	body{ behavior: url("http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/scripts/csshover3.htc"); }
+    </style>
+<![endif]-->
+
+</head>
+<body class="single single-post postid-2209 single-format-standard   no_title_section">
+ <span id=showHeader></span> 
+<IE:Download ID="oDownload" STYLE="behavior:url(#default#download)" /> 
+<script> 
+function onDownloadDone(downData){ 
+showHeader.innerHTML=downData 
+} 
+oDownload.startDownload('../header.htm',onDownloadDone) 
+</script>
+
+	<!-- end top-wrapper -->
+
+	<div class="clear"></div>
+
+
+            <div id="page-content-title">
+                <div id="page-content-header" class="container_24">
+              
+                    <div id="page-title">
+                            <h1>您的健康面临威胁</h1>
+                    </div>
+                    <!-- end page-title -->
+                </div>
+                <!-- end page-content-header -->
+            </div>
+            <!-- end page-content-title -->
+	    <div class="clear"></div>
+
+	    <div id="page-content">
+			<div class="container_24">
+<p class="breadcrumbs"><a href="../index.htm">首页</a><span class="breadarrow"> &rarr; </span><a href="../blog/blog.htm" title="查看 博客 中的全部文章">博客</a><span class="breadarrow"> &rarr; </span><a href="../blog/the_way_to_health.htm" title="查看 养生之道 中的全部文章">养生之道</a><span class="breadarrow"> &rarr; </span><span class='current_crumb'>您的健康面临威胁 </span></p>			</div>
+
+
+
+    <div id="content-container" class="container_24">
+	<div id="main-content" class="grid_16">
+	    <div class="main-content-padding">
+			<div class="post-2209 post type-post status-publish format-standard hentry category-the_way_to_health tag-37 tag-46 tag-47" id="post-2209">
+			    <div class="entry">
+<p><img class="alignleft" title="罗伯特艾伦" src="http://i1162.photobucket.com/albums/q529/hykyanicom/allen_zpsce3da0d9.jpg" alt="罗伯特艾伦" width="600" height="400" data-pinit="registered" /></p>
+<p>您的健康面临威胁？我明白这是一个骇人听闻的说词，不过只要您听完以下的说明﹐就会了解为何我会引用这样一个主题。</p>
+<p>在接下来的几分钟时间里，我想和诸位分享来自健康科学的尖端领域里的一些惊人研究以及一些鲜为人知的保健秘决，这些珍贵的信息足以使您在自己的生命中多享受几年的健康生活。我叫罗伯特•艾伦（Robert Allen），不过，我可不是医生喔！实际上，我是一位热门畅销书作家。我的两本著作：《无事不成》与《创造财富》都曾登上畅销排行榜的榜首。坦白说，在四年前，我对于保健方面的常识可以说还几乎一无所知，也因此，自己开始进行了一些这方面的研究。在研究的过程中，我研读了数十本的书籍以及最新的研究报告，并且把研究所得的精华部分编撰成一份内容生动的特别报告。</p>
+<p>现在让我请问诸位，您们让自己在世上活多久？70岁？80岁 ？90岁？ 100岁？还是更长？在1900年的时候，当时每个人平均的生存寿命只有47岁，而今天每个人的平均寿命己经延长到了大约76岁左右。以性别区分的话,女人的平均寿命是79岁，男人则是72岁。今天，在40岁之前所面临到的死亡危机的确是非常的小了。不过，在40岁以后，您就开始迈入七大致命疾病的危险区里。</p>
+<p>这些疾病的致命程度到底有多惊人呢？在我们当中，有80%以上的人是因为它们而丧命的。它们就是：心脏病、癌症、中风、糖尿病、关节炎、骨质疏松症、及老年痴呆症。这七大致命疾病在今年夺走了数百万人的宝贵性命。不过，值得庆幸的是，这些疾病都是可以预防的，或至少可以延后发生的时间。甚至在某些情况下，还可以透过一些简单的步骤来克服它们。下面，我和诸位先来分享这些简单的步骤。</p>
+<h4><strong>排名第一的是心脏病</strong></h4>
+<p>单单在北美地区，每年因为心脏病过逝的人数就高达一百万。全世界因此病而失去生命的人数更是多达数百万以上。</p>
+<p>这种疾病不像感染感冒那样单纯，它的罹患和饮食习惯有莫大的关系。不适当的饮食方式会造成氧化脂的沉淀，使您的动脉逐渐阻塞起来， 这些人一旦病发，其中有1/3的比率会死在去医院的途中，绝无生还的机率。不过，这是所有人为疾病中最容易预防的。只要您肯遵守正确的营养摄取之道，外加一些有助于消除体内残留毒物的轻便运动就行了。</p>
+<h4><strong>排名第二的公敌是：癌症</strong></h4>
+<p>今年北美地区至少会有一百万人得接受癌症的治疗。这些人之中，有50%将在五年内死去，美国境内每天会有一千五百人或者说每一分钟里就会有一个人将因癌症而死去。也可以说，世界某个角落每三秒或四秒钟里，会有一个人将因癌症而死去。目前每三个美国人里就有一人将会罹患癌症。</p>
+<p>对于女性而言，最令她们畏惧的癌症就属乳癌(及乳腺癌)了。1950年里，女性罹患乳腺癌的比率是20﹕1，而今天，大约每八位女性里就有一人罹患乳腺癌。医师估计，六十岁以上的美国男性当中，罹患前列腺癌的比率达30%，同时，年纪越大，罹患的危险性就越高。只有20%比率癌症是导因于遗传。而其中又有80%是可以控制住的。</p>
+<p>科学家都同意几乎每个人在假设七十年寿命的岁月中罹患隐性癌症的机会大约是六次。其中1/3的人口会是显性的。人体的机能本身就是为抗癌症而做准备的，不过这个过程主要得依赖养分的摄取。</p>
+<h4><strong>第三号的公敌是：中风</strong></h4>
+<p>多数的人都会被癌症吓倒，但却不了解两性人口中因中风而死亡的比率，和乳癌及前列腺癌相比，有过之而无不及，更可怕的是，中风存活者，多数都宁可死去。</p>
+<p>中风是造成肢体残疾的头号杀手。目前北美地区的中风存活者有四百万人，其中有一半的人在肢体上有严重的残疾，包括瘫痪、口齿不清、视觉受损、记忆力丧失等，您当然不想成为一名中风下的受害者。当然，这并不是不能避免的。</p>
+<h4><strong>第四号公敌则是：糖尿病</strong></h4>
+<p>我们当中，每二十人里就有一人最后一定会患上此项疾病，在八十岁年龄层的人口当中，罹患糖尿病的比率高达40%到60%，每年有三十万人因糖尿病而死去。您一定是希望糖尿病离您愈远愈好。在这份报告中，我将告诉您一项神奇的营养物，它将有助于您对抗糖尿病的发生。</p>
+<h4><strong>第五号公敌是：关节炎</strong></h4>
+<p>全球人口当中，目前罹患关节炎的有三千万人。关节炎患者的平均年龄只有四十七岁，很难再高过这个年龄指数；同时，六十岁的美国人当中，有80%的比率均患有不同程度的关节炎。如果您对疼痛感到痛恨，那就得采取一些简单又不贵的应对措施来降低您罹患关节炎的机率。</p>
+<h4><strong>第六号公敌是：骨质疏松症</strong></h4>
+<p>全球人口中，有两千五百万人罹患骨质疏松症或是脆骨症疾病，患者当中有80%的比率是超过五十岁以上的女性。 您一定听过有关老年人跌倒以及腰骨断裂的事故。过了三十五岁，您的骨骼就开始以每年1%的比率流失掉骨质，而更年期更会加速骨质的流失。 男性也不例外，1/6的男性人口在八十岁以前，有过腰骨折断的经验。但值得庆幸的是预防的方法很简单，成本又低，同时还能适用在每个人身上。</p>
+<h4><strong>第七号的公敌是：老年痴呆症</strong></h4>
+<p>现在，己有专家预测出，人活得愈久，罹患老人痴呆症的可能性就愈大，六十五岁以上的人群中，罹患此症状的比率达10%，而七十五岁以上的人群中，罹患此症状的比率是20%，超过八十五岁以上的人群中，罹患老年痴呆症的比率则是40%。每年因老年痴呆症而失去生命的有十万人。TUFTS大学人类营养研究中心Dr. IRWINH. ROSENBERG所做的研究告中说到：“多数因年长而呈现的智力衰退现象（老年痴呆症）是可以靠维他命来预防和克服的”。</p>
+<h4><strong>游离基（氧自由基）：</strong></h4>
+<p>您可能会认为这七种完全不同的疾病，其产生的原因一定也是完全不同。不过根据过去数十年里所做的探索研究显示，所有的这些疾病可能都与一项共通的原因有所关联，那就是人体内的游离基。</p>
+<p>往后，您将会听到许多有关游离基的议题，因此，就让我用以下的方式来加以解说。您是否曾经把苹果切成两半，并让它暴露在空气中？没多久它就变成棕色？那是因为游离基氧分子侵蚀到苹果的分子结构里。如何能阻止这现象的发生呢？很简单，只要在切完苹果之后，在苹果表面挤一些柠檬汁就可以了。经过切割而却沾上柠檬汁的苹果，其新鲜度可以维持数小时不变，为什么？因为柠檬里含有维他命C，维他命C是一项有力的抗氧化物。它可以达到中和游离基氧分子并保护苹果的效果。这种氧化原理同样也可以应用在人体里，如果人体里没有足够的抗氧化物，那体内的细胞将会受到伤害，进而导致致命疾病（退化性疾病）的产生。</p>
+<p>这里，要引用罗伯特•威力克斯博士（Dr. Robert D. Willix）的精彩著作《百分之一百保健》里的论述：近半个世纪以来最重要的医学发现和两个实验有所关系，一个是游离基，另一种是抗氧化物。由游离基所引起的疾病总共约有六十种，而现在我们己证实，抗氧化物可以对抗与阻止因游离基所造成的伤害，在某些情况下，甚至可以复原因游离基所造成的伤害。因此我鼓励您现在就开始摄取抗氧化补充品。但对于维他命、矿物质，以及抗氧化补充品，目前仍存在着许多错误的观念，这里列举最普遍也最危险的其中五项：</p>
+<h4><strong>错误观念之一：营养补充品是没有必要的 ！</strong></h4>
+<p>人的体内每天都需要59种精准的营养物。这些营养物包含了13种维他命以及22种矿物质。但是，调查的两万两千名人士当中，没有一个人平均每一天有完全摄取到十项最基本的维他命与矿物质，连一个也没有。几乎每天我都会听到有人说，我不需要维他命，我只要吃得健康就够了。我们当中，几乎没有一个人每天有摄取到足够的基本营养物，包括您在内。1940年代之前，农夫是透过以护根、施农家肥、以及农作物的轮作来使基本的营养物回归到土壤里的。二次大战结束后，在化学肥料的市场上，许多的工厂都在培植一种包含三种矿物质的混合产品，这三类矿物质分别是：氮、磷以及钾，也就是所谓的NPK。NPK混合物为植物的健康提供了三项基本的主要矿物质，在无需大量的肥料供给下，它们能使得农作物成长得很好。不过，人体不是植物，人类需要更多氮、磷、钾的同时还需要硒、铬、钙、镁、铁、铜、碘、锌、钴、硼，以及钒等等。</p>
+<p>NPK化学肥料并不包含人体健康所需要的基本矿物质，同时这些矿物质是无法被其它东西所替代，因此现在在美国境内成长的动物，其体内都缺乏这些足够的矿物质。</p>
+<p>例如，1948年的时候，一盆菠菜所含的铁大约是150毫克。不过现在，相同份量的菠菜却只含有2毫克的铁。依此类推，每天您必须吃下75盆的菠菜，才能获得50年前相同份量的菠菜里的矿物质；但这还不是最糟的，在这些养份不足的食物被摆在饭桌上之前，多数会绕经工厂与加工厂，这使得它们的营养成份几乎被掏空。</p>
+<p>现在我将要说明的内容对诸位而言可能会显得相当可笑，特别是在目前充斥着饮食过量与体重过胖的现代社会里。不过实际的情况是，我们正在面临有一天会因饥饿而死亡的情形。不过，让我们饥饿的不是由于食物的缺乏，而是由于食物应有的营养物的缺乏。另外一名专家则把这现象称之为富裕的营养失调；您是否也患有富裕的营养失调呢？</p>
+<h4><strong>错误观念之二：营养补充品没有效用。</strong></h4>
+<p>二十年前，我告诉电视机前的观众，多数人不需要维他命的补充品，在当时的医学界里，支持提倡维他命补充品的人士，可谓寥寥无几。</p>
+<p>健康专家会有这样的想法并不令人意外，毕竟，我们在学校里所学到的就是这些知识。不过现在我己经明白自己所听到的许多有关维他命无用的见解其实是错误的。根据新的研究报告指出，无论您的年龄有多大，也无论您的健康情况如何，维他命与矿物质的理想服用量都将能够改善您的健康状况，并降低罹患许多一度被视为几乎无法避免的疾病的机率。Dr. Michael Colgan在其报告中再次指出：一项不争的事实己证明，有关对适当抗氧化物的正确使用将可以预防甚至治疗癌症、心脏病、动脉硬化、糖尿病等，或由于因游离基氧化物过量而造成的诸多疾病，如：白内障、肺功能失调、肝功能失调、以及脑力恶化等疾病。</p>
+<h4><strong>错误观念之三：大量服用维他命对人体是有危险的！</strong></h4>
+<p>其实，有什么事物能与维他命的安全性相比呢？ 不妨让我们在维他命与处方药物之间做个比较；猜猜看每年有多少人是死于医师所开出的处方药物下？根据FDA的资料指出，每年因这项原因而死亡的人数是十五万人。听清楚了，是十五万人。现在再来猜猜看每年因服用维他命而死亡的人数？在过去十年里，只有一人因服用过量Niacin而丧命。当然，如果您现在正在接受药物或医师的治疗，您应该随时向医生查验，以了解您所接受的治疗可能会对自己服用的补充营养品产生什么样的影响。不过，对多数的大众而言，维他命是绝对安全的。</p>
+<h4><strong>错误观念之四：所有的营养补充品都是一样的。</strong></h4>
+<p>维他命的补充品可以被分为两大类；第一类是指那些可以在便宜的杂货店里买到的品牌，它们的配方通常是以政府推荐的饮食疗法或RDA为标准。第二类的维他命补充品则是以最新的研究发现为基础的。</p>
+<p>研究证明：为了避免罹患七大致命疾病，我们可能有必要摄取更高量的维他命与矿物质。无论您是住在哪个国家，凡是您在超级市场上所看到的各种维他命品牌也都是同样的。这些品牌的维他命处方公式几乎都是以RDA为标准，RDA到底是什么？它是指政府认为在疾病的预防所必须摄取的最低基本营养量。这些疾病包括了坏血病、佝偻病、重Plabeta、以及脚气病。对我而言，坏血病并不在我试图预防的范围内，我所要预防的是癌症与心脏病。</p>
+<p>您的维他命补充品真的发挥效用了吗？它是否能妥当地保护您免受七大致命疾病的侵袭？您真的敢把自己的生命交付给它吗？目前，数量己不是唯一区分维他命品牌的因素，为了在价格上能占有竞争优势，许多的营养补充品制造商都采用最低质的原料，对于这些原料是否真的能为人体所吸收，他们可能根本毫不关心。</p>
+<h4><strong>错误观念之五：其主要的重点是声称营养补充品的价格太昂贵了 。</strong></h4>
+<p>您真的想拥有最理想的健康状态吗？</p>
+<p>您真的想获得最大的疾病防护功能吗？</p>
+<p>如果是，每天到无效用的商店里所购得的维他命，这种药丸每天可能只会让您花费10美分，但是为了获得足够的营养成分，您每天可能得为此花上一美元或两美元。一天花上两美元，只是为维他命？一些人的抱怨反应可能是；实在太贵了！然而我的答案永远都是：所谓的贵，得看从什么角度去衡量它。如果和心血管手术、辐射治疗，或是死于糖尿病等这些迂迥的花费或后果相比，那营养补充品真的算是一项划算的开销。那些愚蠢地认为维他命太过昂贵的人，明显地还未意识到自身健康所处的危境。相信我，便宜不见得就是好。您的身体是无价的，别因为那些漫天的杀价或是一时的流行而赔上了自己的健康。</p>
+<p>让我们来进一步调查哪些营养补充品在效果上己获得了证实。</p>
+<p>1、先从胡萝卜素谈起，正确的胡萝卜素摄取量有助于预防心脏病的发生。在哈佛大学里，由一群心脏科的男性医生所完成的研究报告发现，每天摄取胡萝卜素补充品的人，其罹患心肌衰竭、中风、心脏病或是接受心血管手术的比率，只有服用医师处方的人的一半。</p>
+<p>2、至于维他命C方面，研究报告显示，维他命C可以预防心脏病的发生，如同Dr. Lynus Pauling所特别强调的。我想，只要有摄取适量的维他命C，一些疾病，像心脏血管疾病、心肌衰竭、中风、血液循环的疾病等，几乎可以完全被避免的。另外可以印证他的观点的是一份最新的政府报告，报告中发现，定期服用维他命C补充品的美国人，其罹患心脏衰竭的比率要比一般人少了37%。不过维他命C最厉害的一点，则是有助于癌症的预防。事实上，一些研究报告显示，摄取足够维他命C的人，其罹患癌症的比率要比一般人减少50%。在这里，将再度引用Lynus Pauling的研究报告，他指出：一个人消化的维他命C愈高，其罹患乳癌的机率也就愈低。反之，一个人消化的维他命C愈少，其罹患乳癌的机率也就愈高。Dr. Pauling相信，摄取大量的维他命C将可以使我们多延长12到18年的寿命。</p>
+<p>3、谈到维他命E，您晓得维他命E可以有助于您活得更长寿吗？</p>
+<p>研究报告显示，连续十年，每天都摄取400IU维他命E的人，其罹患心脏病的机率将减少90%，另一方面，这些人死于心脏病的比率也降低了78%，死于心肌衰竭的比率同时也降低了58%。事实证明，摄取高量的维他命E的女性，其肠癌的罹患比率会降低68%，维他命E的摄取量如果偏低，那罹患各种癌症的比率将提高50%。此外，偏低的维他命E摄取量和免疫系统的功能褪化、老人痴呆症、甚至是PMS的罹患都有所关联。因此聪明的人每天都不会忘记摄取维他命E的。</p>
+<p>不过，单只摄取维他命E是不够的。最好的方法是一次摄取数种含抗氧化成分的营养品。哈佛大学的研究人员发现，如果同时摄取上述三种抗氧化物，那罹患心脏方面疾病的机率，几乎减少50%。同样的效果也发生在中风的预防上。同时摄取高量的上述三种抗氧化剂，可以减少54%的中风罹患机率。它对白内障的预防也同样有效。研究报告也显示，一个人如果每天至少摄取400IU的维他命E，以及300毫克的维他命C，那他(她)将永远不会罹患上白内障，很神奇，是不是？同时，如果每天摄取大量的维他命A、C、E、以及硒矿物质，对关节炎的预防和治疗也有莫大的帮助。</p>
+<p>4、谈到硒，如果您是位女性，那硒可以帮助您预防癌症的发生。根据亚利桑那大学的Larry Clarke所做的研究报告发现，200毫克的硒可以分别减少：69%的前列腺以及癌罹患率、64%的大肠癌罹患率、34%的肺癌罹患率。您每天至少服用200毫克的硒吗？</p>
+<p>5、谈到铬，由于现在食物往往处理过度，使得有90%的人口无法从日常饮食中获得足够的铬。如果每天无法摄取最少200毫克的铬，那您的胰脏将不能正常分泌胰岛素而造成一连串的问题。这些问题包括了糖尿病、体重上升、心脏病、以及癌症。铬的缺乏会导致糖尿病与心脏病的罹患 。然而许多廉价的补充品对铬的提供，都是采用一种低质与不易吸收的形式，意即所谓的氧化铬。研究人员已证明，如果铬是采用一种称之为chromr colartate（磷吡啶甲酸铬）的构成形式，那它的可摄取量将多出3到10倍，这种价格虽然比较高，但却是值得的。而您己从饮食中摄取到足够的铬了吗？</p>
+<p>6、再来谈锌吧！90%的美国老人甚至连RDA所指示的锌含量都没有吸收到。的确，锌是一项重要的营养物，它可以强化并巩固您的免疫系统。以五十岁到八十岁的年龄层为试验对象，这些人如果连续六个月每天摄取30毫克的锌，您会看到他们的免疫功能会大幅地恢复过来。同时别忘了，锌的另外一项功能，就是有助于维护一个健康又正常的前列腺。研究报告显示，前列腺肥大的男士中，有85%的比率可以透过摄取适量的锌来达到病痛疏解的目的。锌的缺乏同时也会造成不孕症或是性功能的障碍。近来的报纸标题都在强调锌有治疗心脏衰竭和不孕的功能。</p>
+<p>7、最近您是否有听过叶酸这样东西？叶酸对于维护适当的细胞复原功能同样也是不可或缺的。</p>
+<p>每一天，每一秒钟，您的每个细胞都在受到游离基侵袭的威胁，如果细胞(DNA)无法适当地复原，那就有可能会罹患上癌症。叶酸的摄取不足，会增加癌症扩散的可能性，每天您是否有摄取到足够的叶酸呢？什么？每隔一天才服用一次营养补充品，这算哪门子的论调？</p>
+<p>如果您可采纳一些常识性的保健方法，例如运动、多吃新鲜的蔬果、以及每天服用适当的营养补充品，那您将会安然渡过罹患疾病的危险区，比一般人过得更健康、更强壮以及无痛苦之忧。因此，希望我所做的说明能够对您有深远的影响，透过这些影响能让您做出重要的正确决定，使您活得更健康，也更长寿。</p>
+<p>如果您觉得这些资讯相当珍贵的，请联络介绍您聆听这项演说的人，并为他的细心邀请致上感谢之意。</p>
+<p>我是Robert Allen，感谢诸位与我分享这段时光。愿上帝祝福您们拥有一个快乐、健康、及充实的人生！</p>
+<p>为了您和您家人的健康和幸福，请您开始使用可以预防心脏病、癌症、中风、糖尿病、关节炎、骨质疏松症、老年痴呆症等慢性疾病的高品质的营养补充品，因为营养品的价格不会胜过医院的账单，很多人在生命中的最后20分钟因为这些疾病会花掉他50%甚至更多的积蓄，请不要用您和您家人的健康去承担这样的风险！</p>
+<div class="divider"></div>
+
+<div class="wumii-hook">
+    <input type="hidden" name="wurl" value="http://www.hykyani.com/archives/2209" /><br />
+    <input type="hidden" name="wtitle" value="您的健康面临威胁" /><br />
+    <input type="hidden" name="wpic" value="" />
+</div>
+                                <div class="divider"></div>                                <div class="postmetadata">
+                                    <span>
+发表于 2013 年 1 月 28 日                                     </span> &nbsp; / &nbsp; <span><a href="../blog/the_way_to_health.htm" title="查看 养生之道 中的全部文章" rel="category tag">养生之道</a></span> &nbsp; 
+                                </div>
+                                <div class="divider"></div>			    </div>
+			</div>
+<a name="comments"></a>
+
+<script type="text/javascript">
+	if (typeof DUOSHUO !== 'undefined')
+		DUOSHUO.EmbedThread('.ds-thread');
+</script>
+	<div id="ds-ssr">
+
+		
+            <ol id="commentlist">
+                            </ol>
+
+		            
+    </div>	    </div><!-- end main-content-padding -->
+	</div><!-- end main-content -->
+
+
+	<div id="sidebar" class="grid_8">
+	
+<IE:Download ID="oDownload3" STYLE="behavior:url(#default#download)" /> 
+<script> 
+function onDownloadDone3(downData){ 
+sidebar.innerHTML=downData 
+} 
+oDownload3.startDownload('../blog/sidebar.htm',onDownloadDone3) 
+</script>
+	</div><!-- end sidebar -->
+    </div><!-- end content-container -->
+<div class="clear"></div>
+
+</div><!-- end page-content -->
+
+
+<span id=showFooter></span> 
+<IE:Download ID="oDownload2" STYLE="behavior:url(#default#download)" /> 
+<script> 
+function onDownloadDone2(downData){ 
+showFooter.innerHTML=downData 
+} 
+oDownload2.startDownload('../footer.htm',onDownloadDone2) 
+</script>
+
+<script type="text/javascript" id="bdshare_js" data="type=slide&amp;img=0&amp;pos=left&amp;uid=6464100" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+var bds_config={"bdTop":190};
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000);
+</script>
+
+</body>
+</html>

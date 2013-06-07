@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+<?php 
+header('Last-Modified: ' . gmdate('D, d M Y H:i:s', $lastModified) . ' GMT');
+
+     header ("Cache-Control: max-age=600"); 
+?>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8" />
+	<title>Kyani凯安尼 - 带给您健康自由的美好人生！</title>
+	<meta name="description" content="" />
+	<meta name="author" content="" />
+  <meta http-equiv="Cache-Control" content="max-age=600"/>
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+	<!-- CSS
+  ================================================== -->
+	<link rel="stylesheet" href="css/style.css" />
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="images/favicon.ico" />
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png" />
+	
+	<!-- JS
+	================================================== -->
+	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script src="js/superfish.js"></script>
+	<script src="js/jquery.flexslider.js"></script>
+	<script src="js/jquery.tweet.js"></script>
+	<script src="js/selectnav.js"></script>
+	<script src="js/jquery.fancybox.js"></script>
+	<script src="js/functions.js"></script>
+	<script>
+		$(document).ready(function() {
+			$(".slider .flexslider").flexslider({
+				animation: "slide"
+			});
+		});
+	</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+<body>
+
+	<div id="wrapper">
+	
+		
+		<div class="main">
+		<div class="container">
+		
+				<!-- Header - Phone & Social
+				================================================== -->	
+				<div class="sixteen columns header">
+					<div class="phone"><strong>凯安尼中国推广网站</strong></div>
+					<div class="social">
+						<a class="twitter" href="#"></a> 
+						<a class="rss" href="#"></a>
+					</div>	
+				</div>
+				<div class="clear"></div>
+				<div class="des"></div>
+				<!-- Header - Logo & Navigation
+				================================================== -->
+				<div class="sixteen columns top">
+					<div class="logo four columns alpha"></div>
+					<div class="navigation twelve columns alpha omega">
+						<ul id="nav" class="sf-menu sf-shadow" >
+							<li class="active" ><a  href="index.html">首页</a></li>
+							<li>
+								<a href="#">公司</a>
+                <!--
+								<ul>
+									<li><a href="about.html">About Us</a></li>
+									<li><a href="services.html">Services</a></li>
+									<li><a href="testimonials.html">Testimonials</a></li>
+									<li><a href="pricing.html">Pricing Table</a></li>
+									<li><a href="shortcodes.html">Shortcodes</a></li>
+									<li><a href="text-columns.html">Text Columns</a></li>
+									<li>
+										<a href="#">3rd Level</a>
+										<ul>
+											<li><a href="#">Third Level</a>
+											</li><li><a href="#">Element</a>
+											</li><li><a href="#">Here</a>
+										</li></ul>
+									
+								</li></ul>
+							            -->
+							<li>
+								<a href="#">产品</a>
+                <!--
+								<ul>
+									<li><a href="portfolio2.html">2 Columns</a></li>
+									<li><a href="portfolio3.html">3 Columns</a></li>
+									<li><a href="portfolio4.html">4 Columns</a></li>
+								</ul>
+                -->
+							</li>
+							<li>
+								<a href="#">商机</a>
+                <!--
+								<ul>
+									<li><a href="blog.html">Blog Layout</a></li>
+									<li><a href="blog-post.html">Blog Post</a></li>
+								</ul>
+                -->
+							</li>
+							<li><a href="contact.html">联系我们</a></li>
+						</li></ul>
+					</div>
+					<div class="clear"></div>
+					<div id="separator"><span></span></div> 
+					
+				</div>
+				<div class="clear"></div>
+				
+				<!-- Slider
+				================================================== -->
+				<div class="sixteen columns  slider clearfix">
+						<div class="flexslider">
+							<ul class="slides">
+							    <li>
+									<a href="#"><img src="images/slider/slider_image1.png" alt="" /></a>
+									<div class="flex-caption">Creative ideas for your business</div>
+								</li>
+							    <li>
+									<a href="#"><img src="images/slider/slider_image2.png" alt="" /></a>
+									<div class="flex-caption">Your World. Delivered</div>
+								</li>
+								<li>
+									<a href="#"><img src="images/slider/slider_image3.png" alt="" /></a>
+									<div class="flex-caption">Taking You Forward</div>
+								</li>
+							</ul>
+						</div>
+				</div>
+				<div class="clear"></div>
+				
+
+				<!-- Content - services & recent work
+				================================================== -->
+				<div class="content ten columns row">
+				<div class="ten columns home_services row alpha">
+					<h2 class="separator_title"><span>我们</span>的事业</h2>
+					<div class="separator"><div class="green"></div><div class="grey"></div></div>
+					
+					<div class="service five columns alpha space" style="width:580px">
+						<div class="icon left"><img src="images/service_icons/home/webdesign_icon.png" alt="" /></div>
+						<div class="title left">凯安尼，强力有效的天然药物；凯安尼，潜力无穷的健康产业</div>
+						<div class="description"><br><p>健康发展的美国Kyani独资公司，拥有史无前例的财团背景，以复合式电子商务的模式迅速发展，为实现一个美好的愿景：把健康的生活方式带到世界的每一个角落，以及为更多的人创造一个良好的事业平台。</p>
+<p>健康运作的金三角团队，以产品的效果为导向，以公司中的愿景为目标，把最真实的Kyani凯安尼信息带给身边的朋友。相互扶持，共同进步，亲切地把每一个Kyani凯安尼人称作“家人”。  </p>
+<p>如果说寻找事业平台的朋友看中的是公司的实力和公平优厚的激励制度，那么比起这些更能成就他事业和人格的就是kyani凯安尼优质的产品，我们身边有许多寻找健康的朋友在自己和家人被产品的效果所感动后，感激把产品介绍给他的人，并不倦地向身边的人分享自己的见证。</p>
+<p>您来到这里是幸运的，接下来请认真了解这个爱的事业和我们一起享受kyani凯安尼带给我们的全新生活方式！</p></div>
+						  
+					</div>
+        
+				</div>
+				<div class="clear"></div>
+				
+
+				
+				
+				</div>
+				<!-- END content -->
+				
+				
+				
+				<!-- Sidebar
+				================================================== -->
+				<div class="sidebar six columns omega">
+				
+					<div id="news">
+						<div id="heading">新闻和公告</div>
+						<div id="content" class="six columns alpha">
+            
+							<div class="news_item">
+								<div class="pic two columns">
+									<img src="images/avatars/avatar1.png" alt="" />
+								</div>
+								<div class="details four columns alpha omega">
+									<div class="date">2013年5月23日</div>
+									<p>Kyäni严格规定一律禁止会员在任何拍卖或其他网上购物网站, 例如淘宝网, 易趣网等网站, 出售Kyäni的产品。一经证实违规的会员将会被停权处理!</p>
+								</div>
+								<div class="clear"></div>
+							</div>
+							
+							<div class="news_item">
+								<div class="pic two columns">
+									<img src="images/avatars/avatar2.png" alt="" />
+								</div>
+								<div class="details four columns alpha omega">
+									<div class="date">2013年4月7日</div>
+									<p>Kyani上海办公室已正式投入服务, 开放时间为星期一至星期五上午10时至下午6时, 欢迎莅临参观。地址:上海市黄浦区蒙自路763号3001室；电话:021-63773791 </p>
+								</div>
+								<div class="clear"></div>
+							</div>
+              						
+							<div class="clear"></div>
+							
+						
+							
+						</div>   
+					</div> 
+				          
+				</div>
+				<!-- END sidebar -->
+			          	
+		</div>
+		<!-- END container -->
+     <div><strong>声明：</strong>本网站非官方网站，
+www.kyani.net为Kyani凯安尼公司唯一官方网站。本站愿意遵守Kyani凯安尼公司的一切规定与指令。</div>
+		<a id="goto_top" href="#"></a>
+		</div>
+		<!-- END main -->
+		
+	</div>
+	<!-- END wrapper -->
+
+	<div id="footer">
+		<div id="f_line"></div>
+		<div class="container">
+			<div class="footer sixteen columns">
+				<div class="three columns alpha">
+					<h3>NAVIGATE</h3>
+					<ul>
+						<li><a href="#">首页</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Services</a></li>
+						<li><a href="#">Portfolio</a></li>
+						<li><a href="#">Blog</a></li>
+						<li><a href="#">Contacts</a></li>
+					</ul>
+				</div>
+				
+				<div class="three columns">
+					<h3>POWERED BY</h3>
+					<ul>
+						<li><a href="http://www.kyani.net" target="_blank">Kyani官方网站</a></li>
+						<li><a href="http://www.kyaniscience.com/usa/cn/home" target="_blank">Kyani医学家网站</a></li>
+					</ul>
+				</div>
+				
+				<div class="social three columns">
+					<h3>WE'RE SOCIAL</h3>
+					<ul>
+						<li><a class="twitter" href="#">Twitter</a></li>
+						<li><a class="facebook" href="#">Facebook</a></li>
+						<li><a class="flickr" href="#">Flickr</a></li>
+						<li><a class="rss" href="#">RSS Feed</a></li>
+					</ul>
+				</div>
+				
+				<div class="facebook_box seven columns omega">
+					
+				</div> 
+				
+			</div>
+		</div>
+	</div>
+	<div id="footer_bottom">
+		<div class="container">
+		</div>
+	</div>
+	<!-- END footer -->
+
+</body>
+</html>

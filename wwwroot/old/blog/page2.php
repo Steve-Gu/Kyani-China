@@ -1,0 +1,533 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="zh-CN" prefix="og: http://ogp.me/ns#">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="show-menu-auto-arrows" content="0" />
+<meta name="show-menu-drop-shadows" content="1" />
+<meta name="google-site-verification" content="Bu7FHKTF6SSqHfhDc-Tj5NHjDls4SFMwYfbcwu9L2IE" />
+<meta name="msvalidate.01" content="EAB7E791BFBF8B6A1EAFB4B5DA973C7A" />
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script type='text/javascript' src='http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/scripts/cbox/js/jquery.colorbox.js'></script>
+<script type="text/javascript" src="http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/scripts/coinslider/coin-slider.min.js"></script>
+
+<script type="text/javascript">
+function H$(i) {return document.getElementById(i)}
+function H$$(c, p) {return p.getElementsByTagName(c)}
+var slider = function () {
+	function init (o) {
+		this.id = o.id;
+		this.at = o.auto ? o.auto : 3;
+		this.o = 0;
+		this.pos();
+	}
+	init.prototype = {
+		pos : function () {
+			clearInterval(this.__b);
+			this.o = 0;
+			var el = H$(this.id), li = H$$('li', el), l = li.length;
+			var _t = li[l-1].offsetHeight;
+			var cl = li[l-1].cloneNode(true);
+			cl.style.opacity = 0; cl.style.filter = 'alpha(opacity=0)';
+			el.insertBefore(cl, el.firstChild);
+			el.style.top = -_t + 'px';
+			this.anim();
+		},
+		anim : function () {
+			var _this = this;
+			this.__a = setInterval(function(){_this.animH()}, 20);
+		},
+		animH : function () {
+			var _t = parseInt(H$(this.id).style.top), _this = this;
+			if (_t >= -1) {
+				clearInterval(this.__a);
+				H$(this.id).style.top = 0;
+				var list = H$$('li',H$(this.id));
+				H$(this.id).removeChild(list[list.length-1]);
+				this.__c = setInterval(function(){_this.animO()}, 20);
+				//this.auto();
+			}else {
+				var __t = Math.abs(_t) - Math.ceil(Math.abs(_t)*.07);
+				H$(this.id).style.top = -__t + 'px';
+			}
+		},
+		animO : function () {
+			this.o += 2;
+			if (this.o == 100) {
+				clearInterval(this.__c);
+				H$$('li',H$(this.id))[0].style.opacity = 1;
+				H$$('li',H$(this.id))[0].style.filter = 'alpha(opacity=100)';
+				this.auto();
+			}else {
+				H$$('li',H$(this.id))[0].style.opacity = this.o/100;
+				H$$('li',H$(this.id))[0].style.filter = 'alpha(opacity='+this.o+')';
+			}
+		},
+		auto : function () {
+			var _this = this;
+			this.__b = setInterval(function(){_this.pos()}, this.at*1000);
+		}
+	}
+	return init;
+}();
+</script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+	//Examples of how to assign the ColorBox event to elements
+	$(".group1").colorbox({rel:'group1'});
+	$(".group2").colorbox({rel:'group2', transition:"fade"});
+	$(".group3").colorbox({rel:'group3', transition:"none", width:"75%", height:"75%"});
+	$(".group4").colorbox({rel:'group4', slideshow:true});
+	$(".ajax").colorbox();
+	$(".youtube").colorbox({iframe:true, innerWidth:"80%", innerHeight:"70%"});
+	$(".iframe").colorbox({iframe:true, width:"80%", height:"80%"});
+	$(".inline").colorbox({inline:true, width:"50%", height:"100%"});
+	$(".callbacks").colorbox({
+	onOpen:function(){ alert('onOpen: colorbox is about to open'); },
+	onLoad:function(){ alert('onLoad: colorbox has started to load the targeted content'); },
+	onComplete:function(){ alert('onComplete: colorbox has displayed the loaded content'); },
+	onCleanup:function(){ alert('onCleanup: colorbox has begun the close process'); },
+	onClosed:function(){ alert('onClosed: colorbox has completely closed'); }
+	});
+	//Example of preserving a JavaScript event for inline calls.
+	$("#click").click(function(){
+	$('#click').css({"background-color":"#f00", "color":"#fff", "cursor":"inherit"}).text("Open this window again and this message will still be here.");
+	return false;
+	});
+	}); 
+</script><link rel="stylesheet" href="http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/scripts/cbox/colorbox.css" />
+<link rel="pingback" href="http://www.hykyani.com/hykyani.com/xmlrpc.php" />
+<link rel="stylesheet" href="http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/scripts/coinslider/coin-slider-styles.css" type="text/css" />
+<link rel="icon" href="http://www.hykyani.com/hykyani.com/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="http://www.hykyani.com/hykyani.com/favicon.ico" type="image/x-icon">
+
+
+<!--[if IE 6]>
+    <script  type="text/javascript" src="http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/scripts/DD_belatedPNG_0.0.8a-min.js"></script>
+    <script  type="text/javascript">
+    // <![CDATA[
+	DD_belatedPNG.fix('.pngfix, img, #home-page-content li, #page-content li, #bottom li, #footer li, #recentcomments li span');
+    // ]]>
+    </script>
+<![endif]-->
+
+
+<!-- This site is optimized with the Yoast WordPress SEO plugin v1.4.4 - http://yoast.com/wordpress/seo/ -->
+<title>博客|Kyani金三角健康俱乐部 - 助您体验新的人生！</title>
+<link rel="canonical" href="../blog/page2.php" />
+<link rel="prev" href="../blog/blog.php" />
+<link rel="next" href="../blog/page3.php" />
+<meta property='og:locale' content='zh_CN'/>
+<meta property='og:title' content='博客|Kyani金三角健康俱乐部 - 助您体验新的人生！'/>
+<meta property='og:url' content='../blog/page2.php'/>
+<meta property='og:site_name' content='Kyani金三角健康俱乐部 - 助您体验新的人生！'/>
+<meta property='og:type' content='website'/>
+<!-- / Yoast WordPress SEO plugin. -->
+
+<link rel='stylesheet' id='rs-settings-css'  href='http://www.hykyani.com/hykyani.com/wp-content/plugins/revslider/rs-plugin/css/settings.css?ver=3.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='rs-captions-css'  href='http://www.hykyani.com/hykyani.com/wp-content/plugins/revslider/rs-plugin/css/captions.css?ver=3.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-pagenavi-css'  href='http://www.hykyani.com/hykyani.com/wp-content/plugins/wp-pagenavi/pagenavi-css.css?ver=2.70' type='text/css' media='all' />
+<link rel='stylesheet' id='ubermenu-basic-css'  href='http://www.hykyani.com/hykyani.com/wp-content/plugins/ubermenu/styles/basic.css?ver=2.2.2.0' type='text/css' media='all' />
+<link rel='stylesheet' id='reset-css'  href='http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/styles/common-css/reset.css?ver=1.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='text-css'  href='http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/styles/style1/css/text.css?ver=1.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='grid-960-css'  href='http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/styles/common-css/960.css?ver=1.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='superfish_menu-css'  href='http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/scripts/superfish-1.4.8/css/superfish.css?ver=1.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='style-css'  href='http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/styles/style1/css/style.css?ver=1.9.1' type='text/css' media='screen' />
+<link rel='stylesheet' id='custom-style-css'  href='http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/styles/custom/custom_style.php?ver=3.4.2' type='text/css' media='screen' />
+<link rel='stylesheet' id='style-orig-css'  href='http://www.hykyani.com/hykyani.com/wp-content/themes/u-design-child/style.css?ver=1.0' type='text/css' media='screen' />
+<script type="text/javascript">
+var duoshuoQuery = {"short_name":"hykyani","sso":{"login":"http:\/\/www.hykyani.com\/hykyani.com\/wp-login.php?action=duoshuo_login","logout":"http:\/\/www.hykyani.com\/hykyani.com\/wp-login.php?action=logout&_wpnonce=33b0d005cf"},"remote_auth":"W10= 01b37a1d5185351f64566b4fe065ae86d93d446a 1364046125"};
+duoshuoQuery.sso.login += '&redirect_to=' + encodeURIComponent(window.location.href);
+duoshuoQuery.sso.logout += '&redirect_to=' + encodeURIComponent(window.location.href);
+</script>
+<script type='text/javascript' src='http://www.hykyani.com/hykyani.com/wp-includes/js/jquery/jquery.js?ver=1.7.2'></script>
+<script type='text/javascript' src='http://www.hykyani.com/hykyani.com/wp-content/plugins/revslider/rs-plugin/js/jquery.themepunch.plugins.min.js?ver=3.4.2'></script>
+<script type='text/javascript' src='http://www.hykyani.com/hykyani.com/wp-content/plugins/revslider/rs-plugin/js/jquery.themepunch.revolution.min.js?ver=3.4.2'></script>
+<script type='text/javascript' src='http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/scripts/superfish-1.4.8/js/superfish.combined.js?ver=1.0.0'></script>
+<script type='text/javascript' src='http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/scripts/script.js?ver=1.0'></script>
+<script type='text/javascript' src='http://static.duoshuo.com/embed.js'></script>
+
+<!-- UberMenu CSS - Controlled through UberMenu Options Panel 
+================================================================ -->
+<style type="text/css" id="ubermenu-style-generator-css">
+/* Style Generator Styles */
+#megaMenu {
+  border:none;
+  border-bottom:;
+  background-color:transparent;
+  background:-webkit-gradient(linear,left top,left bottom,from(transparent),to(transparent));
+  background:-webkit-linear-gradient(top,transparent,transparent);
+  background:-moz-linear-gradient(top,transparent,transparent);
+  background:-ms-linear-gradient(top,transparent,transparent);
+  background:-o-linear-gradient(top,transparent,transparent);
+  -webkit-border-radius:0px;
+  -moz-border-radius:0px;
+  border-radius:0px;
+  -moz-background-clip:padding;
+  -webkit-background-clip:padding-box;
+  background-clip:padding-box;
+  -webkit-box-shadow:inset 0px 1px 0px 0px rgba(255,255,255,0.9);
+  -moz-box-shadow:inset 0px 1px 0px 0px rgba(255,255,255,0.9);
+  box-shadow:inset 0px 1px 0px 0px rgba(255,255,255,0.9);
+}
+#megaMenu ul.megaMenu > li > a, #megaMenu ul.megaMenu > li > span.um-anchoremulator {
+  font-size:14px;
+  color:#555555;
+  padding:16px 18px;
+  font-weight:normal;
+}
+#megaMenu.megaMenuHorizontal ul.megaMenu > li > a, #megaMenu.megaMenuHorizontal ul.megaMenu > li > span.um-anchoremulator {
+  border-left:1px solid transparent;
+  -webkit-box-shadow:inset 1px 0px 0px 0px rgba(255,255,255,0.9);
+  -moz-box-shadow:inset 1px 0px 0px 0px rgba(255,255,255,0.9);
+  box-shadow:inset 1px 0px 0px 0px rgba(255,255,255,0.9);
+}
+#megaMenu.megaMenuVertical ul.megaMenu > li > a, #megaMenu.megaMenuVertical ul.megaMenu > li > span.um-anchoremulator {
+  border-top:1px solid transparent;
+  -webkit-box-shadow:inset 0px 1px 0px 0px rgba(255,255,255,0.9);
+  -moz-box-shadow:inset 0px 1px 0px 0px rgba(255,255,255,0.9);
+  box-shadow:inset 0px 1px 0px 0px rgba(255,255,255,0.9);
+}
+#megaMenu ul li.ss-nav-menu-reg li.megaReg-with-sub > a, #megaMenu ul li.ss-nav-menu-reg li.megaReg-with-sub > span.um-anchoremulator, #megaMenu ul li.mega-with-sub > a, #megaMenu ul li.mega-with-sub > span.um-anchoremulator, #megaMenu ul li.ss-nav-menu-mega > a, #megaMenu ul li.ss-nav-menu-mega > span.um-anchoremulator { padding-right:23px; }
+#megaMenu ul.megaMenu > li > a span.wpmega-link-title, #megaMenu ul.megaMenu > li > span.um-anchoremulator span.wpmega-link-title {
+  text-transform:none;
+  text-shadow:0 -1px 1px transparent;
+}
+#megaMenu ul.megaMenu > li:hover > a, #megaMenu ul.megaMenu > li > a:hover, #megaMenu ul.megaMenu > li.megaHover > a, #megaMenu ul.megaMenu > li:hover > span.um-anchoremulator, #megaMenu ul.megaMenu > li > span.um-anchoremulator:hover, #megaMenu ul.megaMenu > li.megaHover > span.um-anchoremulator {
+  color:#aaaaaa aa !important;
+  border-bottom-color:transparent !important;
+  background-color:transparent;
+  background:-webkit-gradient(linear,left top,left bottom,from(transparent),to(transparent));
+  background:-webkit-linear-gradient(top,transparent,transparent);
+  background:-moz-linear-gradient(top,transparent,transparent);
+  background:-ms-linear-gradient(top,transparent,transparent);
+  background:-o-linear-gradient(top,transparent,transparent);
+  -webkit-box-shadow:inset 1px 1px 0px 0px rgba(255,255,255,0.9);
+  -moz-box-shadow:inset 1px 1px 0px 0px rgba(255,255,255,0.9);
+  box-shadow:inset 1px 1px 0px 0px rgba(255,255,255,0.9);
+}
+#megaMenu ul.megaMenu > li:hover > a span.wpmega-link-title, #megaMenu ul.megaMenu > li:hover > span.um-anchoremulator span.wpmega-link-title, #megaMenu ul.megaMenu > li > a:hover span.wpmega-link-title, #megaMenu ul.megaMenu > li > span.um-anchoremulator:hover span.wpmega-link-title, #megaMenu ul.megaMenu > li.megaHover > a span.wpmega-link-title, #megaMenu ul.megaMenu > li.megaHover > span.um-anchoremulator span.wpmega-link-title { text-shadow:0 -1px 1px transparent; }
+#megaMenu ul.megaMenu > li.current-menu-item > a, #megaMenu ul.megaMenu > li.current-menu-parent > a, #megaMenu ul.megaMenu > li.current-menu-ancestor > a { color:#000000; }
+#megaMenu ul.megaMenu > li.ss-nav-menu-mega > ul.sub-menu-1, #megaMenu ul.megaMenu li.ss-nav-menu-reg ul.sub-menu {
+  border-color:transparent;
+  color:#000000;
+  text-shadow:0px 1px 1px transparent;
+  -webkit-box-shadow:1px 1px 1px transparent;
+  -moz-box-shadow:1px 1px 1px transparent;
+  box-shadow:1px 1px 1px transparent;
+  background-color:#f9f9f9;
+  background:-webkit-gradient(linear,left top,left bottom,from(#f9f9f9),to(#f9f9f9));
+  background:-webkit-linear-gradient(top,#f9f9f9,#f9f9f9);
+  background:-moz-linear-gradient(top,#f9f9f9,#f9f9f9);
+  background:-ms-linear-gradient(top,#f9f9f9,#f9f9f9);
+  background:-o-linear-gradient(top,#f9f9f9,#f9f9f9);
+}
+#megaMenu ul.megaMenu ul.sub-menu .wpmega-postlist a { color:#000000; }
+#megaMenu.megaMenuHorizontal ul.megaMenu > li.ss-nav-menu-mega > ul.sub-menu-1, #megaMenu.megaMenuHorizontal ul.megaMenu li.ss-nav-menu-reg > ul.sub-menu { border-top:; }
+#megaMenu ul.megaMenu > li.ss-nav-menu-mega > ul.sub-menu-1 > li { min-width:100px; }
+#megaMenu ul li.ss-nav-menu-mega ul.sub-menu-1 > li > a, #megaMenu ul li.ss-nav-menu-mega ul.sub-menu-1 > li:hover > a, #megaMenu ul li.ss-nav-menu-mega ul ul.sub-menu .ss-nav-menu-header > a, #megaMenu ul li.ss-nav-menu-mega ul.sub-menu-1 > li > span.um-anchoremulator, #megaMenu ul li.ss-nav-menu-mega ul ul.sub-menu .ss-nav-menu-header > span.um-anchoremulator, .wpmega-widgetarea h2.widgettitle {
+  color:#777777;
+  font-size:14px;
+  font-weight:bold;
+  text-shadow:0px 1px 1px transparent;
+  padding-bottom:.4em;
+  border-bottom:1px dotted transparent;
+  margin-bottom:.6em;
+}
+#megaMenu ul li.ss-nav-menu-mega ul.sub-menu-1 > li:hover > a { color:#777777; }
+#megaMenu ul li.ss-nav-menu-mega ul ul.sub-menu li > a, #megaMenu ul li.ss-nav-menu-mega ul ul.sub-menu li > span.um-anchoremulator, #megaMenu ul ul.sub-menu li > a, #megaMenu ul ul.sub-menu li > span.um-anchoremulator {
+  color:#888888;
+  font-size:14px;
+  text-shadow:0px 1px 1px transparent;
+  background-color:transparent;
+}
+#megaMenu ul li.ss-nav-menu-mega ul ul.sub-menu li a:hover, #megaMenu ul ul.sub-menu > li:hover > a {
+  color:#000000;
+  background-color:transparent;
+}
+#megaMenu ul.megaMenu > li.menu-item > .wpmega-nonlink > form#searchform { padding-top:6px; }
+#megaMenu ul.megaMenu li.menu-item.ss-nav-menu-highlight > a, #megaMenu ul.megaMenu li.menu-item.ss-nav-menu-highlight > span.um-anchoremulator { color:#8f0000 !important; }
+#megaMenu .ss-nav-menu-with-img > a > .wpmega-link-title, #megaMenu .ss-nav-menu-with-img > a > .wpmega-link-description, #megaMenu .ss-nav-menu-with-img > a > .wpmega-item-description, #megaMenu .ss-nav-menu-with-img > span.um-anchoremulator > .wpmega-link-title, #megaMenu .ss-nav-menu-with-img > span.um-anchoremulator > .wpmega-link-description, #megaMenu .ss-nav-menu-with-img > span.um-anchoremulator > .wpmega-item-description { padding-left:30px; }
+.ss-nav-menu-with-img { min-height:25px; }
+#megaMenu ul.megaMenu li a span.wpmega-item-description, #megaMenu ul.megaMenu li span.um-anchoremulator span.wpmega-item-description {
+  font-size:10px;
+  line-height:1.4em;
+  color:#bbbbbb;
+  text-transform:none;
+}
+#megaMenu ul li.mega-with-sub > a:after, #megaMenu ul li.ss-nav-menu-mega > a:after, #megaMenu ul li.mega-with-sub > span.um-anchoremulator:after, #megaMenu ul li.ss-nav-menu-mega > span.um-anchoremulator:after { border-top-color:#888888; }
+#megaMenu ul li.ss-nav-menu-reg li.megaReg-with-sub > a:after, #megaMenu ul li.ss-nav-menu-reg li.megaReg-with-sub > span.um-anchoremulator:after { border-left-color:transparent; }
+#megaMenu .wpmega-divider {
+  border-top:1px solid transparent;
+  border-bottom:1px solid rgba(255,255,255,0.05);
+}
+#megaMenu.megaMenuVertical > ul > li > a, #megaMenu.megaMenuVertical > ul > li > span.um-anchoremulator {
+  background-color:transparent;
+  background:-webkit-gradient(linear,left top,left bottom,from(transparent),to(transparent));
+  background:-webkit-linear-gradient(top,transparent,transparent);
+  background:-moz-linear-gradient(top,transparent,transparent);
+  background:-ms-linear-gradient(top,transparent,transparent);
+  background:-o-linear-gradient(top,transparent,transparent);
+}
+#megaMenu.megaMenuVertical ul li.ss-nav-menu-reg li.megaReg-with-sub > a:after, #megaMenu.megaMenuVertical ul li.mega-with-sub > a:after, #megaMenu.megaMenuVertical ul li.ss-nav-menu-mega > a:after, #megaMenu.megaMenuVertical ul li.ss-nav-menu-reg li.megaReg-with-sub > span.um-anchoremulator:after, #megaMenu.megaMenuVertical ul li.mega-with-sub > span.um-anchoremulator:after, #megaMenu.megaMenuVertical ul li.ss-nav-menu-mega > span.um-anchoremulator:after { border-left-color:#888888; }
+#megaMenu.megaMenuVertical ul.megaMenu > li.ss-nav-menu-mega > ul.sub-menu-1, #megaMenu.megaMenuVertical ul.megaMenu li.ss-nav-menu-reg > ul.sub-menu { border-left:; }
+#megaMenu.megaMenuHorizontal ul.megaMenu { *border-bottom:none; }
+#megaMenu.megaMenuVertical ul.megaMenu { *border-right:none; }
+
+
+
+/* Image Text Padding */
+#megaMenu .ss-nav-menu-with-img > a > .wpmega-link-title, #megaMenu .ss-nav-menu-with-img > a > .wpmega-link-description, #megaMenu .ss-nav-menu-with-img > a > .wpmega-item-description, #megaMenu .ss-nav-menu-with-img > span.um-anchoremulator > .wpmega-link-title, #megaMenu .ss-nav-menu-with-img > span.um-anchoremulator > .wpmega-link-description, #megaMenu .ss-nav-menu-with-img > span.um-anchoremulator > .wpmega-item-description{
+  padding-left: 32px;
+}	
+</style>
+<!-- end UberMenu CSS -->
+		
+			
+<!--[if lte IE 9]>
+    <link rel="stylesheet" href="http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/styles/common-css/ie-all.css" media="screen" type="text/css" />
+<![endif]-->
+<!--[if lte IE 7]>
+    <link rel="stylesheet" href="http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/styles/common-css/ie6-7.css" media="screen" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+    <link rel="stylesheet" href="http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/styles/common-css/ie6.css" media="screen" type="text/css" />
+    <style type="text/css">
+	body{ behavior: url("http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/scripts/csshover3.htc"); }
+    </style>
+<![endif]-->
+
+</head>
+<body class="archive paged category category-blog category-10 paged-2 category-paged-2   no_title_section">
+<?php require '../header.php'; ?>
+	<!-- end top-wrapper -->
+
+	<div class="clear"></div>
+
+
+            <div id="page-content-title">
+                <div id="page-content-header" class="container_24">
+              
+                    <div id="page-title">
+                                <h1 class="pagetitle">博客</h1>
+                    </div>
+                    <!-- end page-title -->
+                </div>
+                <!-- end page-content-header -->
+            </div>
+            <!-- end page-content-title -->
+	    <div class="clear"></div>
+
+	    <div id="page-content">
+			<div class="container_24">
+<p class="breadcrumbs"><a href="../index.php">首页</a><span class="breadarrow"> &rarr; </span><span class='current_crumb'>博客 </span></p>			</div>
+
+
+
+
+<div id="content-container" class="container_24">
+    <div id="main-content" class="grid_16">
+	<div class="main-content-padding">
+
+	    
+		  
+						    <div class="post-2238 post type-post status-publish format-standard hentry category-51 tag-43 tag-52" id="post-2238">
+				<div class="entry">
+                                    <div class="post-top">
+                                        <h2><a href="../archives/2238" rel="bookmark" title="Kyani是一份令人振奋的事业">Kyani是一份令人振奋的事业</a></h2>
+                                        <div class="postmetadata">
+                                            <span>
+ 2013 年 2 月 27 日                                             </span> &nbsp; / &nbsp; <span><a href="../blog/startup.php" title="查看 创业心声 中的全部文章" rel="category tag">创业心声</a></span> &nbsp;
+                                        </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                    
+<span class="custom-frame alignleft"><a href="../archives/2238.php" title="Kyani是一份令人振奋的事业"><img src="http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/scripts/timthumb.php?src=http://www.hykyani.com/hykyani.com/wp-content/uploads/2013/03/career1.jpg&amp;w=575&amp;h=200&amp;zc=1&amp;q=100" alt="Kyani是一份令人振奋的事业" /></a></span><p>                                    
+<p>姨妈刚刚给我介绍kyani的时候，其实我是有点排斥的，我想，我是一个设计师，这不是我应该做的工作，但是她是长辈，我就把她的话听完吧，她给我介绍了kyani的产品，我还是听得半懂不懂的，后来她把王老师介绍给了我，让我跟王老师学习，经过一番讲解，对这个平台有了一个比较深入的了解，这真的是一个电子商务平台，可以在网上进行推广的，我看到了我做这个工作的可操作性，后来我去听了周六的招商会议，招商会议上对这个平台有更加深入的介绍，那个晚上我失眠了，我觉得这个公司的制度是天才发明的！</p>
+</p><a class="read-more-align-left" href="../archives/2238.php" title="阅读全文"><span>阅读全文</span> &rarr;</a><div class="clear"></div>
+				</div>
+			    </div>
+<div class="divider top-of-page"><a href="#top" title="页面顶部">回到顶部</a></div>						    <div class="post-2234 post type-post status-publish format-standard hentry category-kyani_product" id="post-2234">
+				<div class="entry">
+                                    <div class="post-top">
+                                        <h2><a href="../archives/2234.php" rel="bookmark" title="Kyani新舒康产品可以减少体内90%的炎症 ！">Kyani新舒康产品可以减少体内90%的炎症 ！</a></h2>
+                                        <div class="postmetadata">
+                                            <span>
+ 2013 年 2 月 26 日                                             </span> &nbsp; / &nbsp; <span><a href="../blog/kyani_product.php" title="查看 产品相关 中的全部文章" rel="category tag">产品相关</a></span> &nbsp;
+                                        </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                    
+<span class="custom-frame alignleft"><a href="../archives/2234.php" title="Kyani新舒康产品可以减少体内90%的炎症 ！"><img src="http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/scripts/timthumb.php?src=http://www.hykyani.com/hykyani.com/wp-content/uploads/2013/03/proven-to-reduce-inflammation-by-over90%.jpg&amp;w=575&amp;h=200&amp;zc=1&amp;q=100" alt="Kyani新舒康产品可以减少体内90%的炎症 ！" /></a></span><p>                                    
+<p>革命性突破研究：在对于新舒康的独立调研会议和最后一次会议期间，经过对于新舒康的单独调查，结果毫无例外的证明新舒康可以成功地减少超过90%的炎症，这项激动人心的成果来自著名的阿巴斯博士和伯克博士，在2013年国际大会上，超过半数有经常性疼痛和发炎症状的美国人进行了讨论分享，充分证实了Kyani新舒康的显著消炎效果。</p>
+</p><a class="read-more-align-left" href="../archives/2234.php" title="阅读全文"><span>阅读全文</span> &rarr;</a><div class="clear"></div>
+				</div>
+			    </div>
+<div class="divider top-of-page"><a href="#top" title="页面顶部">回到顶部</a></div>						    <div class="post-2232 post type-post status-publish format-standard hentry category-news_of_kyani tag-kyani tag-31 tag-29" id="post-2232">
+				<div class="entry">
+                                    <div class="post-top">
+                                        <h2><a href="../archives/2232.php" rel="bookmark" title="Kynect,让你轻轻松松把事业做遍全球！">Kynect,让你轻轻松松把事业做遍全球！</a></h2>
+                                        <div class="postmetadata">
+                                            <span>
+ 2013 年 2 月 25 日                                             </span> &nbsp; / &nbsp; <span><a href="../blog/news_of_kyani.php" title="查看 公司动态 中的全部文章" rel="category tag">公司动态</a></span> &nbsp; 
+                                        </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                    
+<span class="custom-frame alignleft"><a href="../archives/2232.php" title="Kynect,让你轻轻松松把事业做遍全球！"><img src="http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/scripts/timthumb.php?src=http://www.hykyani.com/hykyani.com/wp-content/uploads/2013/03/Kyani-Kynect_global-tools.jpg&amp;w=575&amp;h=200&amp;zc=1&amp;q=100" alt="Kynect,让你轻轻松松把事业做遍全球！" /></a></span><p>                                    
+<p>Kyani Kynect是Kyani公司计划推出的全新应用群，包括Kyani平板版、Kyani手机版等，应用之间可以协同工作，也可独立运行，这个工具的开发旨于让我们更有效、更效率、更全面地开展各项工作。<br />
+Kyani Kynect的第一阶段已在手机上开发，预计于本年在欧美同步推出。亚洲及其他市场也会接着推出，具体时间公司将会在推出时发布。</p>
+</p><a class="read-more-align-left" href="../archives/2232.php" title="阅读全文"><span>阅读全文</span> &rarr;</a><div class="clear"></div>
+				</div>
+			    </div>
+<div class="divider top-of-page"><a href="#top" title="页面顶部">回到顶部</a></div>						    <div class="post-2212 post type-post status-publish format-standard hentry category-success-mentality tag-48" id="post-2212">
+				<div class="entry">
+                                    <div class="post-top">
+                                        <h2><a href="../archives/2212.php" rel="bookmark" title="相信自己！">相信自己！</a></h2>
+                                        <div class="postmetadata">
+                                            <span>
+ 2013 年 1 月 31 日                                             </span> &nbsp; / &nbsp; <span><a href="../blog/success-mentality.php" title="查看 成功心态 中的全部文章" rel="category tag">成功心态</a></span> &nbsp; 
+                                        </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                    
+<span class="custom-frame alignleft"><a href="../archives/2212.php" title="相信自己！"><img src="http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/scripts/timthumb.php?src=http://www.hykyani.com/hykyani.com/wp-content/uploads/2013/03/believe-in-yourself.jpg&amp;w=575&amp;h=200&amp;zc=1&amp;q=100" alt="相信自己！" /></a></span><p>                                    
+<p>两年前，我下班回到家里，发现我的女儿正坐在餐座旁哭泣，我抱了抱她，问她怎么了。她把一张纸推到了我的面前，那张纸脏脏的，上面画了一个没有完成的动物画。可能画的是一只狗，可看起来更像老鼠。“我不会画！”她抽泣着说。我没说什么，给了她一个小小的拥抱，在她旁边坐下，告诉她我可以帮她。我拿出了一张干净的纸，然后开始和她一起想象她尝试画的那只小狗。</p>
+</p><a class="read-more-align-left" href="../archives/2212.php" title="阅读全文"><span>阅读全文</span> &rarr;</a><div class="clear"></div>
+				</div>
+			    </div>
+<div class="divider top-of-page"><a href="#top" title="页面顶部">回到顶部</a></div>						    <div class="post-2209 post type-post status-publish format-standard hentry category-the_way_to_health tag-37 tag-46 tag-47" id="post-2209">
+				<div class="entry">
+                                    <div class="post-top">
+                                        <h2><a href="../archives/2209.php" rel="bookmark" title="您的健康面临威胁">您的健康面临威胁</a></h2>
+                                        <div class="postmetadata">
+                                            <span>
+ 2013 年 1 月 28 日                                             </span> &nbsp; / &nbsp; <span><a href="../blog/the_way_to_health.php" title="查看 养生之道 中的全部文章" rel="category tag">养生之道</a></span> &nbsp;
+                                        </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                    
+<span class="custom-frame alignleft"><a href="../archives/2209.php" title="您的健康面临威胁"><img src="http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/scripts/timthumb.php?src=http://www.hykyani.com/hykyani.com/wp-content/uploads/2013/03/您的健康收到威胁.jpg&amp;w=575&amp;h=200&amp;zc=1&amp;q=100" alt="您的健康面临威胁" /></a></span><p>                                    
+<p>您的健康面临威胁？我明白这是一个骇人听闻的说词，不过只要您听完以下的说明﹐就会了解为何我会引用这样一个主题。在接下来的几分钟时间里，我想和诸位分享来自健康科学的尖端领域里的一些惊人研究以及一些鲜为人知的保健秘决，这些珍贵的信息足以使您在自己的生命中多享受几年的健康生活。我叫罗伯特•艾伦（Robert Allen），不过，我可不是医生喔！实际上，我是一位热门畅销书作家。</p>
+</p><a class="read-more-align-left" href="../archives/2209.php" title="阅读全文"><span>阅读全文</span> &rarr;</a><div class="clear"></div>
+				</div>
+			    </div>
+<div class="divider top-of-page"><a href="#top" title="页面顶部">回到顶部</a></div>						    <div class="post-2208 post type-post status-publish format-standard hentry category-kyani_product tag-33 tag-34 tag-45" id="post-2208">
+				<div class="entry">
+                                    <div class="post-top">
+                                        <h2><a href="../archives/2208.php" rel="bookmark" title="运动员的福音">运动员的福音</a></h2>
+                                        <div class="postmetadata">
+                                            <span>
+ 2013 年 1 月 27 日                                             </span> &nbsp; / &nbsp; <span><a href="../blog/kyani_product.php" title="查看 产品相关 中的全部文章" rel="category tag">产品相关</a></span> &nbsp; 
+                                        </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                    
+<span class="custom-frame alignleft"><a href="../archives/2208.php" title="运动员的福音"><img src="http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/scripts/timthumb.php?src=http://www.hykyani.com/hykyani.com/wp-content/uploads/2013/03/运动员的福音.jpg&amp;w=575&amp;h=200&amp;zc=1&amp;q=100" alt="运动员的福音" /></a></span><p>                                    
+<p>一氧化氮对于提高运动员的成绩有很大的作用，2010年的一篇论文报告中写道：50岁以上的自行车运动员在食用了有助人体产生一氧化氮的营养补充品后能够骑得更远更快。一氧化氮能够提高人体的自然运动力。另一个论文，也是发表于2010，证实了一氧化氮营养补充品对运动员的作用。研究对象能够运动更久而不劳累。Kyani尼多乐能够提高人体自身产生一氧化氮的能力。</p>
+</p><a class="read-more-align-left" href="../archives/2208.php" title="阅读全文"><span>阅读全文</span> &rarr;</a><div class="clear"></div>
+				</div>
+			    </div>
+<div class="divider top-of-page"><a href="#top" title="页面顶部">回到顶部</a></div>						    <div class="post-2206 post type-post status-publish format-standard hentry category-team-construction" id="post-2206">
+				<div class="entry">
+                                    <div class="post-top">
+                                        <h2><a href="../archives/2206.php" rel="bookmark" title="Kyani就是答案!">Kyani就是答案!</a></h2>
+                                        <div class="postmetadata">
+                                            <span>
+ 2013 年 1 月 26 日                                             </span> &nbsp; / &nbsp; <span><a href="../blog/team-construction.php" title="查看 团队建设 中的全部文章" rel="category tag">团队建设</a></span> &nbsp; 
+                                        </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                    
+<span class="custom-frame alignleft"><a href="../archives/2206.php" title="Kyani就是答案!"><img src="http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/scripts/timthumb.php?src=http://www.hykyani.com/hykyani.com/wp-content/uploads/2013/03/新会员怎么在2013年做到钻石级别呢？.jpg&amp;w=575&amp;h=200&amp;zc=1&amp;q=100" alt="Kyani就是答案!" /></a></span><p>                                    
+<p>Kyani双红钻经理约翰和贝基•伯塞尔告诉了我们新年设定目标的重要性，并对我们确保事业的进步做出了一些建议。<br />
+贝基，新年了，你对大家有什么样的话要说呢？<br />
+我觉得，大家一定要加油，给自己设立本年达成钻石的目标。<br />
+你觉得这个目标对于你团队的每一个会员来说都是可以实现的吗？<br />
+一定！我绝对的相信每个Kyani家人都能达成，无论他们现在是什么级别。</p>
+</p><a class="read-more-align-left" href="../archives/2206.php" title="阅读全文"><span>阅读全文</span> &rarr;</a><div class="clear"></div>
+				</div>
+			    </div>
+<div class="divider top-of-page"><a href="#top" title="页面顶部">回到顶部</a></div>						    <div class="post-2196 post type-post status-publish format-standard hentry category-news_of_kyani tag-29 tag-44" id="post-2196">
+				<div class="entry">
+                                    <div class="post-top">
+                                        <h2><a href="../archives/2196.php" rel="bookmark" title="Kyani董事会主席汉森给Kyani家人的一封信">Kyani董事会主席汉森给Kyani家人的一封信</a></h2>
+                                        <div class="postmetadata">
+                                            <span>
+ 2013 年 1 月 25 日                                             </span> &nbsp; / &nbsp; <span><a href="../blog/news_of_kyani.php" title="查看 公司动态 中的全部文章" rel="category tag">公司动态</a></span> &nbsp; 
+                                        </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                    
+<span class="custom-frame alignleft"><a href="../archives/2196.php" title="Kyani董事会主席汉森给Kyani家人的一封信"><img src="http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/scripts/timthumb.php?src=http://i1162.photobucket.com/albums/q529/hykyanicom/LetterfromKirkHansen_zps5506abf7.jpg&amp;w=575&amp;h=200&amp;zc=1&amp;q=100" alt="Kyani董事会主席汉森给Kyani家人的一封信" /></a></span><p>                                    
+<p>Kyani家人大家好，还有不到一个月我们的全球国际大会就在拉斯维加斯拉开帷幕了！我很高兴看到你们在大会中重遇故知，结交新友。大家经常听到领导人鼓励大家努力达成国际大会的参与资格。为什么他们会这么重视国际大会呢？难道仅是为了竞争、炫耀或者只为多一次旅游机会吗？不，事实上我们是要在大会上联系成功者，学习他们的经验，从而获得和他们一样的成功。</p>
+</p><a class="read-more-align-left" href="../archives/2196.php" title="阅读全文"><span>阅读全文</span> &rarr;</a><div class="clear"></div>
+				</div>
+			    </div>
+<div class="divider top-of-page"><a href="#top" title="页面顶部">回到顶部</a></div>						    <div class="post-2173 post type-post status-publish format-standard hentry category-team-construction tag-43" id="post-2173">
+				<div class="entry">
+                                    <div class="post-top">
+                                        <h2><a href="../archives/2173.php" rel="bookmark" title="最健康的团队支持，让我们真正地获得健康">最健康的团队支持，让我们真正地获得健康</a></h2>
+                                        <div class="postmetadata">
+                                            <span>
+ 2012 年 11 月 29 日                                             </span> &nbsp; / &nbsp; <span><a href="../blog/team-construction.php" title="查看 团队建设 中的全部文章" rel="category tag">团队建设</a></span> &nbsp;
+                                        </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                    
+<span class="custom-frame alignleft"><a href="../archives/2173.php" title="最健康的团队支持，让我们真正地获得健康"><img src="http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/scripts/timthumb.php?src=http://www.hykyani.com/hykyani.com/wp-content/uploads/2013/03/we-are-team-in-Kyani.jpg&amp;w=575&amp;h=200&amp;zc=1&amp;q=100" alt="最健康的团队支持，让我们真正地获得健康" /></a></span><p>                                    
+<p>亲爱的Kyani家人和新朋友：<br />
+好久不见了，做为站长的我，必须要告诉大家为什么这么久都疏于网站更新，其实我有好多内容计划要更新，但是我一直在为大家做工具支持，现在我们有简约又全面的产品介绍及见证资料，有适用于大小会议的易拉宝，有最新的PPT资料，有最新翻译的视频。而且，昨天参加我们主办的300人健康养生会的朋友们是否也看到我们更加流畅的会议流程了呢？</p>
+</p><a class="read-more-align-left" href="../archives/2173.php" title="阅读全文"><span>阅读全文</span> &rarr;</a><div class="clear"></div>
+				</div>
+			    </div>
+<div class="divider top-of-page"><a href="#top" title="页面顶部">回到顶部</a></div>						    <div class="post-2140 post type-post status-publish format-standard hentry category-the_way_to_health tag-37 tag-40" id="post-2140">
+				<div class="entry">
+                                    <div class="post-top">
+                                        <h2><a href="../archives/2140.php" rel="bookmark" title="养生之道——赵霖教授谈养生">养生之道——赵霖教授谈养生</a></h2>
+                                        <div class="postmetadata">
+                                            <span>
+ 2012 年 8 月 1 日                                             </span> &nbsp; / &nbsp; <span><a href="../blog/the_way_to_health.php" title="查看 养生之道 中的全部文章" rel="category tag">养生之道</a></span> &nbsp; 
+                                        </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                    
+<span class="custom-frame alignleft"><a href="../archives/2140.php" title="养生之道——赵霖教授谈养生"><img src="http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/scripts/timthumb.php?src=http://www.hykyani.com/hykyani.com/wp-content/uploads/2013/03/赵霖教授谈养生.jpg&amp;w=575&amp;h=200&amp;zc=1&amp;q=100" alt="养生之道——赵霖教授谈养生" /></a></span><p>                                    
+<p>如今太多的人不懂得健康的生活方式有多么的重要，而提倡、宣传、践行正确的养生理念是我们每一个Kyani凯安尼会员的使命。其实，我们要知道，再好的产品，包括Kyani凯安尼的金三角组合，也不能替你睡觉，替你吃饭，我们要健康，一定要改正不良的饮食习惯和生活方式！Kyani凯安尼正是代表着这种健康的生活方式，提倡全面的健康：健康的体魄，快乐的情绪，以及每年5次的国际度假和丰厚的收入，还有好多陪伴家人的时间。所以，我提倡Kyani会员一定要好好学习养生知识，不要熬夜，不要饮食不规律，多多运动，好好吃产品，我们一定会远离病痛，改善亚健康，延长寿命。</p>
+</p><a class="read-more-align-left" href="../archives/2140.php" title="阅读全文"><span>阅读全文</span> &rarr;</a><div class="clear"></div>
+				</div>
+			    </div>
+<div class="divider top-of-page"><a href="#top" title="页面顶部">回到顶部</a></div>			
+			<div class="clear"></div>
+
+<div class='wp-pagenavi'>
+<span class='pages'>第 2 页，共 3 页</span><a href='../blog/blog.php' class='previouspostslink'>&laquo;</a><a href='../blog/blog.php' class='page smaller'>1</a><span class='current'>2</span><a href='../blog/page3.php' class='page larger'>3</a><a href='../blog/page3.php' class='nextpostslink'>&raquo;</a>
+</div>
+	    	</div><!-- end main-content-padding -->
+    </div><!-- end main-content -->
+<?php require '../blog/sidebar.php'; ?>
+	</div><!-- end sidebar -->
+
+
+
+
+
+</div><!-- end content-container -->
+
+<div class="clear"></div>
+
+
+
+<?php require '../footer.php'; ?>
+
+<script type="text/javascript" id="bdshare_js" data="type=slide&amp;img=0&amp;pos=left&amp;uid=6464100" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+var bds_config={"bdTop":190};
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000);
+</script>
+</body>
+</html>

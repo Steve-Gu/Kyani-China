@@ -1,0 +1,68 @@
+    <div id="wrapper-1" class="pngfix">
+<!-- header ------------------------>    	
+	<div id="top-wrapper">
+            <div id="top-elements" class="container_24">
+            <!--
+                    <div id="logo" class="grid_14">
+                            <h1><a title="Kyani金三角健康俱乐部 &#8211; 助您体验新的人生！" class="pngfix" href="../index.php">Kyani金三角健康俱乐部 &#8211; 助您体验新的人生！</a></h1>
+                    </div>
+                    <div id="slogan" class="grid_17"></div>
+                    
+                       
+                        <div id="search" class="grid_6 prefix_18">
+                            <form action="http://www.hykyani.com/" method="get">
+                                <div class="search_box">
+                                   
+                                </div>
+                            </form>
+                        </div>
+                        -->
+                        <!-- end search -->
+                        
+												<!-- end logo slogan -->
+                        <div class="phone-number grid_7 prefix_17">
+                            <div class="phone-number-padding">
+											<!--点击这里直接联系我们--><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1985337080&site=qq&menu=yes">
+													<img border="0" src="http://wpa.qq.com/pa?p=2:570291778:41" alt="点击这里给我发消息" title="点击这里给我发消息"></a>                            
+													</div><!-- end phone-number-padding -->
+                        </div><!-- end phone-number -->                        
+                        
+	    </div>
+	    <!-- end top-elements -->
+      <!--
+            <div id="main-menu" class="pngfix">
+                <div id="dropdown-holder" class="container_24">
+<div id="megaMenu" class="megaMenuContainer megaMenu-nojs megaMenuHorizontal megaMenuOnHover wpmega-withjs wpmega-noconflict"><ul id="megaUber" class="megaMenu" data-theme-location="primary"><li id="menu-item-1855" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home ss-nav-menu-item-0 ss-nav-menu-item-depth-0 ss-nav-menu-reg"><a title="kyani" href="../index.php"><span class="wpmega-link-title">主页</span></a></li><li id="menu-item-2083" class="menu-item menu-item-type-custom menu-item-object-custom mega-with-sub ss-nav-menu-item-1 ss-nav-menu-item-depth-0 ss-nav-menu-reg"><a title="Kyani公司"><span class="wpmega-link-title">Kyani公司</span></a>
+<ul class="sub-menu sub-menu-1">
+<li id="menu-item-1922" class="menu-item menu-item-type-post_type menu-item-object-page ss-nav-menu-item-depth-1">
+	<a title="Kyani的故事" href="../kyani-company/kyani-story.php"><span class="wpmega-link-title">Kyani的故事</span></a></li><li id="menu-item-1893" class="menu-item menu-item-type-post_type menu-item-object-page ss-nav-menu-item-depth-1">
+	<a title="财团背景及技术团队" href="../kyani-company/powerful-company.php"><span class="wpmega-link-title">财团背景及技术团队</span></a></li><li id="menu-item-1918" class="menu-item menu-item-type-post_type menu-item-object-page ss-nav-menu-item-depth-1">
+	<a title="公司发展" href="../kyani-company/development-of-company.php"><span class="wpmega-link-title">公司发展</span></a></li><li id="menu-item-2079" class="menu-item menu-item-type-post_type menu-item-object-page ss-nav-menu-item-depth-1">
+	<a title="Kyani全球慈善" href="../kyani-company/kyani-caring-hands.php"><span class="wpmega-link-title">Kyani全球慈善</span></a></li></ul>
+</li><li id="menu-item-2085" class="menu-item menu-item-type-custom menu-item-object-custom mega-with-sub ss-nav-menu-item-2 ss-nav-menu-item-depth-0 ss-nav-menu-reg ss-nav-menu-nolink"><span class="um-anchoremulator" ><span class="wpmega-link-title">Kyani产品</span></span>
+<ul class="sub-menu sub-menu-1">
+<li id="menu-item-1932" class="menu-item menu-item-type-post_type menu-item-object-page ss-nav-menu-item-depth-1">
+	<a href="../kyani-products/kyani-health-triangle.php"><span class="wpmega-link-title">Kyani健康三角组合</span></a></li><li id="menu-item-1964" class="menu-item menu-item-type-post_type menu-item-object-page ss-nav-menu-item-depth-1">
+	<a href="../kyani-products/kyani-sunrise.php"><span class="wpmega-link-title">新乐思</span></a></li><li id="menu-item-2001" class="menu-item menu-item-type-post_type menu-item-object-page ss-nav-menu-item-depth-1">
+	<a href="../kyani-products/kyani-nitro-fx.php"><span class="wpmega-link-title">尼多乐</span></a></li><li id="menu-item-2082" class="menu-item menu-item-type-post_type menu-item-object-page ss-nav-menu-item-depth-1">
+	<a href="../kyani-products/kyani-the-sunset.php"><span class="wpmega-link-title">新舒康</span></a></li><li id="menu-item-2147" class="menu-item menu-item-type-post_type menu-item-object-page ss-nav-menu-item-depth-1">
+	<a href="../kyani-products/kyani-product-usage.php"><span class="wpmega-link-title">Kyani组合食用方法</span></a></li></ul>
+</li><li id="menu-item-2106" class="menu-item menu-item-type-post_type menu-item-object-page ss-nav-menu-item-3 ss-nav-menu-item-depth-0 ss-nav-menu-reg">
+	<a href="../kyani-opportunity.php"><span class="wpmega-link-title">Kyani商机</span></a></li><li id="menu-item-1860" class="menu-item menu-item-type-custom menu-item-object-custom ss-nav-menu-item-4 ss-nav-menu-item-depth-0 ss-nav-menu-reg">
+	<a title="加入我们" href="http://www.kyani.net"><span class="wpmega-link-title">加入我们</span></a></li><li id="menu-item-2130" class="menu-item menu-item-type-custom menu-item-object-custom mega-with-sub ss-nav-menu-item-5 ss-nav-menu-item-depth-0 ss-nav-menu-reg">
+	<a title="博客" href="../blog/blog.php"><span class="wpmega-link-title">博客</span></a>
+<ul class="sub-menu sub-menu-1">
+<li id="menu-item-2132" class="menu-item menu-item-type-taxonomy menu-item-object-category ss-nav-menu-item-depth-1">
+	<a href="../blog/news_of_kyani.php"><span class="wpmega-link-title">公司动态</span></a></li><li id="menu-item-2131" class="menu-item menu-item-type-taxonomy menu-item-object-category ss-nav-menu-item-depth-1">
+	<a href="../blog/kyani_product.php"><span class="wpmega-link-title">产品相关</span></a></li><li id="menu-item-2133" class="menu-item menu-item-type-taxonomy menu-item-object-category ss-nav-menu-item-depth-1">
+	<a href="../blog/business_opportunity.php"><span class="wpmega-link-title">商业机会</span></a></li><li id="menu-item-2136" class="menu-item menu-item-type-taxonomy menu-item-object-category ss-nav-menu-item-depth-1">
+	<a href="../blog/the_way_to_health.php"><span class="wpmega-link-title">养生之道</span></a></li><li id="menu-item-2197" class="menu-item menu-item-type-taxonomy menu-item-object-category ss-nav-menu-item-depth-1">
+	<a href="../blog/team-construction.php"><span class="wpmega-link-title">团队建设</span></a></li><li id="menu-item-2235" class="menu-item menu-item-type-taxonomy menu-item-object-category ss-nav-menu-item-depth-1">
+	<a href="../blog/success-mentality.php"><span class="wpmega-link-title">成功心态</span></a></li></ul>
+</li><li id="menu-item-1865" class="menu-item menu-item-type-post_type menu-item-object-page ss-nav-menu-item-6 ss-nav-menu-item-depth-0 ss-nav-menu-reg">
+<a title="联系我们" href="../contact-us.php"><span class="wpmega-link-title">联系我们</span></a></li></ul></div>                </div>
+               
+            </div>
+            -->
+            <!-- end top-main-menu -->
+	</div>

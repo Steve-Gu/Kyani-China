@@ -1,0 +1,414 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="zh-CN" prefix="og: http://ogp.me/ns#">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="show-menu-auto-arrows" content="0" />
+<meta name="show-menu-drop-shadows" content="1" />
+<meta name="google-site-verification" content="Bu7FHKTF6SSqHfhDc-Tj5NHjDls4SFMwYfbcwu9L2IE" />
+<meta name="msvalidate.01" content="EAB7E791BFBF8B6A1EAFB4B5DA973C7A" />
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script type='text/javascript' src='http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/scripts/cbox/js/jquery.colorbox.js'></script>
+<script type="text/javascript" src="http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/scripts/coinslider/coin-slider.min.js"></script>
+
+<script type="text/javascript">
+function H$(i) {return document.getElementById(i)}
+function H$$(c, p) {return p.getElementsByTagName(c)}
+var slider = function () {
+	function init (o) {
+		this.id = o.id;
+		this.at = o.auto ? o.auto : 3;
+		this.o = 0;
+		this.pos();
+	}
+	init.prototype = {
+		pos : function () {
+			clearInterval(this.__b);
+			this.o = 0;
+			var el = H$(this.id), li = H$$('li', el), l = li.length;
+			var _t = li[l-1].offsetHeight;
+			var cl = li[l-1].cloneNode(true);
+			cl.style.opacity = 0; cl.style.filter = 'alpha(opacity=0)';
+			el.insertBefore(cl, el.firstChild);
+			el.style.top = -_t + 'px';
+			this.anim();
+		},
+		anim : function () {
+			var _this = this;
+			this.__a = setInterval(function(){_this.animH()}, 20);
+		},
+		animH : function () {
+			var _t = parseInt(H$(this.id).style.top), _this = this;
+			if (_t >= -1) {
+				clearInterval(this.__a);
+				H$(this.id).style.top = 0;
+				var list = H$$('li',H$(this.id));
+				H$(this.id).removeChild(list[list.length-1]);
+				this.__c = setInterval(function(){_this.animO()}, 20);
+				//this.auto();
+			}else {
+				var __t = Math.abs(_t) - Math.ceil(Math.abs(_t)*.07);
+				H$(this.id).style.top = -__t + 'px';
+			}
+		},
+		animO : function () {
+			this.o += 2;
+			if (this.o == 100) {
+				clearInterval(this.__c);
+				H$$('li',H$(this.id))[0].style.opacity = 1;
+				H$$('li',H$(this.id))[0].style.filter = 'alpha(opacity=100)';
+				this.auto();
+			}else {
+				H$$('li',H$(this.id))[0].style.opacity = this.o/100;
+				H$$('li',H$(this.id))[0].style.filter = 'alpha(opacity='+this.o+')';
+			}
+		},
+		auto : function () {
+			var _this = this;
+			this.__b = setInterval(function(){_this.pos()}, this.at*1000);
+		}
+	}
+	return init;
+}();
+</script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+	//Examples of how to assign the ColorBox event to elements
+	$(".group1").colorbox({rel:'group1'});
+	$(".group2").colorbox({rel:'group2', transition:"fade"});
+	$(".group3").colorbox({rel:'group3', transition:"none", width:"75%", height:"75%"});
+	$(".group4").colorbox({rel:'group4', slideshow:true});
+	$(".ajax").colorbox();
+	$(".youtube").colorbox({iframe:true, innerWidth:"80%", innerHeight:"70%"});
+	$(".iframe").colorbox({iframe:true, width:"80%", height:"80%"});
+	$(".inline").colorbox({inline:true, width:"50%", height:"100%"});
+	$(".callbacks").colorbox({
+	onOpen:function(){ alert('onOpen: colorbox is about to open'); },
+	onLoad:function(){ alert('onLoad: colorbox has started to load the targeted content'); },
+	onComplete:function(){ alert('onComplete: colorbox has displayed the loaded content'); },
+	onCleanup:function(){ alert('onCleanup: colorbox has begun the close process'); },
+	onClosed:function(){ alert('onClosed: colorbox has completely closed'); }
+	});
+	//Example of preserving a JavaScript event for inline calls.
+	$("#click").click(function(){
+	$('#click').css({"background-color":"#f00", "color":"#fff", "cursor":"inherit"}).text("Open this window again and this message will still be here.");
+	return false;
+	});
+	}); 
+</script><link rel="stylesheet" href="http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/scripts/cbox/colorbox.css" />
+<link rel="pingback" href="http://www.hykyani.com/hykyani.com/xmlrpc.php" />
+<link rel="stylesheet" href="http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/scripts/coinslider/coin-slider-styles.css" type="text/css" />
+<link rel="icon" href="http://www.hykyani.com/hykyani.com/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="http://www.hykyani.com/hykyani.com/favicon.ico" type="image/x-icon">
+
+
+<!--[if IE 6]>
+    <script  type="text/javascript" src="http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/scripts/DD_belatedPNG_0.0.8a-min.js"></script>
+    <script  type="text/javascript">
+    // <![CDATA[
+	DD_belatedPNG.fix('.pngfix, img, #home-page-content li, #page-content li, #bottom li, #footer li, #recentcomments li span');
+    // ]]>
+    </script>
+<![endif]-->
+
+
+<!-- This site is optimized with the Yoast WordPress SEO plugin v1.4.4 - http://yoast.com/wordpress/seo/ -->
+<title>新乐思 - Kyani金三角健康俱乐部 - 助您体验新的人生！</title>
+<meta name="description" content="Kyani新乐思的主要成分是阿拉斯加野生蓝莓，具有药用价值，其抗氧化能力是普通蓝莓的10倍！Kyani新乐思可以维护心脏健康、防止血栓形成；有效的减压、美容；滋养免疫系统、舒缓炎症；解除眼睛疲劳、改善视力；抗衰老、改善记忆力；DNA防御、抗癌；控制血糖、预防糖尿病及并发症；不含杂质。"/>
+<meta name="keywords" content="新乐思,Kyani,野生蓝莓"/>
+<link rel="canonical" href="http://www.hykyani.com/kyani-products/kyani-sunrise" />
+<meta property='og:locale' content='zh_CN'/>
+<meta property='og:title' content='新乐思 - Kyani金三角健康俱乐部 - 助您体验新的人生！'/>
+<meta property='og:description' content='Kyani新乐思的主要成分是阿拉斯加野生蓝莓，具有药用价值，其抗氧化能力是普通蓝莓的10倍！Kyani新乐思可以维护心脏健康、防止血栓形成；有效的减压、美容；滋养免疫系统、舒缓炎症；解除眼睛疲劳、改善视力；抗衰老、改善记忆力；DNA防御、抗癌；控制血糖、预防糖尿病及并发症；不含杂质。'/>
+<meta property='og:url' content='http://www.hykyani.com/kyani-products/kyani-sunrise'/>
+<meta property='og:site_name' content='Kyani金三角健康俱乐部 - 助您体验新的人生！'/>
+<meta property='og:type' content='article'/>
+<meta property='og:image' content='http://i1162.photobucket.com/albums/q529/hykyanicom/kyani-sunrise.jpg'/>
+<meta property='og:image' content='http://i1162.photobucket.com/albums/q529/hykyanicom/blueberry.jpg'/>
+<meta property='og:image' content='http://i1162.photobucket.com/albums/q529/hykyanicom/alaska.jpg'/>
+<meta property='og:image' content='http://i1162.photobucket.com/albums/q529/hykyanicom/kyanisuperfoods.jpg'/>
+<meta property='og:image' content='http://i1162.photobucket.com/albums/q529/hykyanicom/contrast-between-kyani-sunrise-and-centrum.jpg'/>
+<meta property='og:image' content='http://i1162.photobucket.com/albums/q529/hykyanicom/kyanisunrise_p.jpg'/>
+<!-- / Yoast WordPress SEO plugin. -->
+
+<link rel='stylesheet' id='rs-settings-css'  href='http://www.hykyani.com/hykyani.com/wp-content/plugins/revslider/rs-plugin/css/settings.css?ver=3.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='rs-captions-css'  href='http://www.hykyani.com/hykyani.com/wp-content/plugins/revslider/rs-plugin/css/captions.css?ver=3.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-pagenavi-css'  href='http://www.hykyani.com/hykyani.com/wp-content/plugins/wp-pagenavi/pagenavi-css.css?ver=2.70' type='text/css' media='all' />
+<link rel='stylesheet' id='ubermenu-basic-css'  href='http://www.hykyani.com/hykyani.com/wp-content/plugins/ubermenu/styles/basic.css?ver=2.2.2.0' type='text/css' media='all' />
+<link rel='stylesheet' id='reset-css'  href='http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/styles/common-css/reset.css?ver=1.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='text-css'  href='http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/styles/style1/css/text.css?ver=1.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='grid-960-css'  href='http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/styles/common-css/960.css?ver=1.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='superfish_menu-css'  href='http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/scripts/superfish-1.4.8/css/superfish.css?ver=1.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='style-css'  href='http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/styles/style1/css/style.css?ver=1.9.1' type='text/css' media='screen' />
+<link rel='stylesheet' id='custom-style-css'  href='http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/styles/custom/custom_style.php?ver=3.4.2' type='text/css' media='screen' />
+<link rel='stylesheet' id='style-orig-css'  href='http://www.hykyani.com/hykyani.com/wp-content/themes/u-design-child/style.css?ver=1.0' type='text/css' media='screen' />
+<script type="text/javascript">
+var duoshuoQuery = {"short_name":"hykyani","sso":{"login":"http:\/\/www.hykyani.com\/hykyani.com\/wp-login.php?action=duoshuo_login","logout":"http:\/\/www.hykyani.com\/hykyani.com\/wp-login.php?action=logout&_wpnonce=ba771b1d9e"},"remote_auth":"W10= 488a6f7465f8bc5d2942cdde5cd54cb2534f5a00 1364036087"};
+duoshuoQuery.sso.login += '&redirect_to=' + encodeURIComponent(window.location.href);
+duoshuoQuery.sso.logout += '&redirect_to=' + encodeURIComponent(window.location.href);
+</script>
+<script type='text/javascript' src='http://www.hykyani.com/hykyani.com/wp-includes/js/jquery/jquery.js?ver=1.7.2'></script>
+<script type='text/javascript' src='http://www.hykyani.com/hykyani.com/wp-includes/js/comment-reply.js?ver=3.4.2'></script>
+<script type='text/javascript' src='http://www.hykyani.com/hykyani.com/wp-content/plugins/revslider/rs-plugin/js/jquery.themepunch.plugins.min.js?ver=3.4.2'></script>
+<script type='text/javascript' src='http://www.hykyani.com/hykyani.com/wp-content/plugins/revslider/rs-plugin/js/jquery.themepunch.revolution.min.js?ver=3.4.2'></script>
+<script type='text/javascript' src='http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/scripts/superfish-1.4.8/js/superfish.combined.js?ver=1.0.0'></script>
+<script type='text/javascript' src='http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/scripts/script.js?ver=1.0'></script>
+<script type='text/javascript' src='http://static.duoshuo.com/embed.js'></script>
+
+<!-- UberMenu CSS - Controlled through UberMenu Options Panel 
+================================================================ -->
+<style type="text/css" id="ubermenu-style-generator-css">
+/* Style Generator Styles */
+#megaMenu {
+  border:none;
+  border-bottom:;
+  background-color:transparent;
+  background:-webkit-gradient(linear,left top,left bottom,from(transparent),to(transparent));
+  background:-webkit-linear-gradient(top,transparent,transparent);
+  background:-moz-linear-gradient(top,transparent,transparent);
+  background:-ms-linear-gradient(top,transparent,transparent);
+  background:-o-linear-gradient(top,transparent,transparent);
+  -webkit-border-radius:0px;
+  -moz-border-radius:0px;
+  border-radius:0px;
+  -moz-background-clip:padding;
+  -webkit-background-clip:padding-box;
+  background-clip:padding-box;
+  -webkit-box-shadow:inset 0px 1px 0px 0px rgba(255,255,255,0.9);
+  -moz-box-shadow:inset 0px 1px 0px 0px rgba(255,255,255,0.9);
+  box-shadow:inset 0px 1px 0px 0px rgba(255,255,255,0.9);
+}
+#megaMenu ul.megaMenu > li > a, #megaMenu ul.megaMenu > li > span.um-anchoremulator {
+  font-size:14px;
+  color:#555555;
+  padding:16px 18px;
+  font-weight:normal;
+}
+#megaMenu.megaMenuHorizontal ul.megaMenu > li > a, #megaMenu.megaMenuHorizontal ul.megaMenu > li > span.um-anchoremulator {
+  border-left:1px solid transparent;
+  -webkit-box-shadow:inset 1px 0px 0px 0px rgba(255,255,255,0.9);
+  -moz-box-shadow:inset 1px 0px 0px 0px rgba(255,255,255,0.9);
+  box-shadow:inset 1px 0px 0px 0px rgba(255,255,255,0.9);
+}
+#megaMenu.megaMenuVertical ul.megaMenu > li > a, #megaMenu.megaMenuVertical ul.megaMenu > li > span.um-anchoremulator {
+  border-top:1px solid transparent;
+  -webkit-box-shadow:inset 0px 1px 0px 0px rgba(255,255,255,0.9);
+  -moz-box-shadow:inset 0px 1px 0px 0px rgba(255,255,255,0.9);
+  box-shadow:inset 0px 1px 0px 0px rgba(255,255,255,0.9);
+}
+#megaMenu ul li.ss-nav-menu-reg li.megaReg-with-sub > a, #megaMenu ul li.ss-nav-menu-reg li.megaReg-with-sub > span.um-anchoremulator, #megaMenu ul li.mega-with-sub > a, #megaMenu ul li.mega-with-sub > span.um-anchoremulator, #megaMenu ul li.ss-nav-menu-mega > a, #megaMenu ul li.ss-nav-menu-mega > span.um-anchoremulator { padding-right:23px; }
+#megaMenu ul.megaMenu > li > a span.wpmega-link-title, #megaMenu ul.megaMenu > li > span.um-anchoremulator span.wpmega-link-title {
+  text-transform:none;
+  text-shadow:0 -1px 1px transparent;
+}
+#megaMenu ul.megaMenu > li:hover > a, #megaMenu ul.megaMenu > li > a:hover, #megaMenu ul.megaMenu > li.megaHover > a, #megaMenu ul.megaMenu > li:hover > span.um-anchoremulator, #megaMenu ul.megaMenu > li > span.um-anchoremulator:hover, #megaMenu ul.megaMenu > li.megaHover > span.um-anchoremulator {
+  color:#aaaaaa aa !important;
+  border-bottom-color:transparent !important;
+  background-color:transparent;
+  background:-webkit-gradient(linear,left top,left bottom,from(transparent),to(transparent));
+  background:-webkit-linear-gradient(top,transparent,transparent);
+  background:-moz-linear-gradient(top,transparent,transparent);
+  background:-ms-linear-gradient(top,transparent,transparent);
+  background:-o-linear-gradient(top,transparent,transparent);
+  -webkit-box-shadow:inset 1px 1px 0px 0px rgba(255,255,255,0.9);
+  -moz-box-shadow:inset 1px 1px 0px 0px rgba(255,255,255,0.9);
+  box-shadow:inset 1px 1px 0px 0px rgba(255,255,255,0.9);
+}
+#megaMenu ul.megaMenu > li:hover > a span.wpmega-link-title, #megaMenu ul.megaMenu > li:hover > span.um-anchoremulator span.wpmega-link-title, #megaMenu ul.megaMenu > li > a:hover span.wpmega-link-title, #megaMenu ul.megaMenu > li > span.um-anchoremulator:hover span.wpmega-link-title, #megaMenu ul.megaMenu > li.megaHover > a span.wpmega-link-title, #megaMenu ul.megaMenu > li.megaHover > span.um-anchoremulator span.wpmega-link-title { text-shadow:0 -1px 1px transparent; }
+#megaMenu ul.megaMenu > li.current-menu-item > a, #megaMenu ul.megaMenu > li.current-menu-parent > a, #megaMenu ul.megaMenu > li.current-menu-ancestor > a { color:#000000; }
+#megaMenu ul.megaMenu > li.ss-nav-menu-mega > ul.sub-menu-1, #megaMenu ul.megaMenu li.ss-nav-menu-reg ul.sub-menu {
+  border-color:transparent;
+  color:#000000;
+  text-shadow:0px 1px 1px transparent;
+  -webkit-box-shadow:1px 1px 1px transparent;
+  -moz-box-shadow:1px 1px 1px transparent;
+  box-shadow:1px 1px 1px transparent;
+  background-color:#f9f9f9;
+  background:-webkit-gradient(linear,left top,left bottom,from(#f9f9f9),to(#f9f9f9));
+  background:-webkit-linear-gradient(top,#f9f9f9,#f9f9f9);
+  background:-moz-linear-gradient(top,#f9f9f9,#f9f9f9);
+  background:-ms-linear-gradient(top,#f9f9f9,#f9f9f9);
+  background:-o-linear-gradient(top,#f9f9f9,#f9f9f9);
+}
+#megaMenu ul.megaMenu ul.sub-menu .wpmega-postlist a { color:#000000; }
+#megaMenu.megaMenuHorizontal ul.megaMenu > li.ss-nav-menu-mega > ul.sub-menu-1, #megaMenu.megaMenuHorizontal ul.megaMenu li.ss-nav-menu-reg > ul.sub-menu { border-top:; }
+#megaMenu ul.megaMenu > li.ss-nav-menu-mega > ul.sub-menu-1 > li { min-width:100px; }
+#megaMenu ul li.ss-nav-menu-mega ul.sub-menu-1 > li > a, #megaMenu ul li.ss-nav-menu-mega ul.sub-menu-1 > li:hover > a, #megaMenu ul li.ss-nav-menu-mega ul ul.sub-menu .ss-nav-menu-header > a, #megaMenu ul li.ss-nav-menu-mega ul.sub-menu-1 > li > span.um-anchoremulator, #megaMenu ul li.ss-nav-menu-mega ul ul.sub-menu .ss-nav-menu-header > span.um-anchoremulator, .wpmega-widgetarea h2.widgettitle {
+  color:#777777;
+  font-size:14px;
+  font-weight:bold;
+  text-shadow:0px 1px 1px transparent;
+  padding-bottom:.4em;
+  border-bottom:1px dotted transparent;
+  margin-bottom:.6em;
+}
+#megaMenu ul li.ss-nav-menu-mega ul.sub-menu-1 > li:hover > a { color:#777777; }
+#megaMenu ul li.ss-nav-menu-mega ul ul.sub-menu li > a, #megaMenu ul li.ss-nav-menu-mega ul ul.sub-menu li > span.um-anchoremulator, #megaMenu ul ul.sub-menu li > a, #megaMenu ul ul.sub-menu li > span.um-anchoremulator {
+  color:#888888;
+  font-size:14px;
+  text-shadow:0px 1px 1px transparent;
+  background-color:transparent;
+}
+#megaMenu ul li.ss-nav-menu-mega ul ul.sub-menu li a:hover, #megaMenu ul ul.sub-menu > li:hover > a {
+  color:#000000;
+  background-color:transparent;
+}
+#megaMenu ul.megaMenu > li.menu-item > .wpmega-nonlink > form#searchform { padding-top:6px; }
+#megaMenu ul.megaMenu li.menu-item.ss-nav-menu-highlight > a, #megaMenu ul.megaMenu li.menu-item.ss-nav-menu-highlight > span.um-anchoremulator { color:#8f0000 !important; }
+#megaMenu .ss-nav-menu-with-img > a > .wpmega-link-title, #megaMenu .ss-nav-menu-with-img > a > .wpmega-link-description, #megaMenu .ss-nav-menu-with-img > a > .wpmega-item-description, #megaMenu .ss-nav-menu-with-img > span.um-anchoremulator > .wpmega-link-title, #megaMenu .ss-nav-menu-with-img > span.um-anchoremulator > .wpmega-link-description, #megaMenu .ss-nav-menu-with-img > span.um-anchoremulator > .wpmega-item-description { padding-left:30px; }
+.ss-nav-menu-with-img { min-height:25px; }
+#megaMenu ul.megaMenu li a span.wpmega-item-description, #megaMenu ul.megaMenu li span.um-anchoremulator span.wpmega-item-description {
+  font-size:10px;
+  line-height:1.4em;
+  color:#bbbbbb;
+  text-transform:none;
+}
+#megaMenu ul li.mega-with-sub > a:after, #megaMenu ul li.ss-nav-menu-mega > a:after, #megaMenu ul li.mega-with-sub > span.um-anchoremulator:after, #megaMenu ul li.ss-nav-menu-mega > span.um-anchoremulator:after { border-top-color:#888888; }
+#megaMenu ul li.ss-nav-menu-reg li.megaReg-with-sub > a:after, #megaMenu ul li.ss-nav-menu-reg li.megaReg-with-sub > span.um-anchoremulator:after { border-left-color:transparent; }
+#megaMenu .wpmega-divider {
+  border-top:1px solid transparent;
+  border-bottom:1px solid rgba(255,255,255,0.05);
+}
+#megaMenu.megaMenuVertical > ul > li > a, #megaMenu.megaMenuVertical > ul > li > span.um-anchoremulator {
+  background-color:transparent;
+  background:-webkit-gradient(linear,left top,left bottom,from(transparent),to(transparent));
+  background:-webkit-linear-gradient(top,transparent,transparent);
+  background:-moz-linear-gradient(top,transparent,transparent);
+  background:-ms-linear-gradient(top,transparent,transparent);
+  background:-o-linear-gradient(top,transparent,transparent);
+}
+#megaMenu.megaMenuVertical ul li.ss-nav-menu-reg li.megaReg-with-sub > a:after, #megaMenu.megaMenuVertical ul li.mega-with-sub > a:after, #megaMenu.megaMenuVertical ul li.ss-nav-menu-mega > a:after, #megaMenu.megaMenuVertical ul li.ss-nav-menu-reg li.megaReg-with-sub > span.um-anchoremulator:after, #megaMenu.megaMenuVertical ul li.mega-with-sub > span.um-anchoremulator:after, #megaMenu.megaMenuVertical ul li.ss-nav-menu-mega > span.um-anchoremulator:after { border-left-color:#888888; }
+#megaMenu.megaMenuVertical ul.megaMenu > li.ss-nav-menu-mega > ul.sub-menu-1, #megaMenu.megaMenuVertical ul.megaMenu li.ss-nav-menu-reg > ul.sub-menu { border-left:; }
+#megaMenu.megaMenuHorizontal ul.megaMenu { *border-bottom:none; }
+#megaMenu.megaMenuVertical ul.megaMenu { *border-right:none; }
+
+
+
+/* Image Text Padding */
+#megaMenu .ss-nav-menu-with-img > a > .wpmega-link-title, #megaMenu .ss-nav-menu-with-img > a > .wpmega-link-description, #megaMenu .ss-nav-menu-with-img > a > .wpmega-item-description, #megaMenu .ss-nav-menu-with-img > span.um-anchoremulator > .wpmega-link-title, #megaMenu .ss-nav-menu-with-img > span.um-anchoremulator > .wpmega-link-description, #megaMenu .ss-nav-menu-with-img > span.um-anchoremulator > .wpmega-item-description{
+  padding-left: 32px;
+}	
+</style>
+<!-- end UberMenu CSS -->
+		
+			
+<!--[if lte IE 9]>
+    <link rel="stylesheet" href="http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/styles/common-css/ie-all.css" media="screen" type="text/css" />
+<![endif]-->
+<!--[if lte IE 7]>
+    <link rel="stylesheet" href="http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/styles/common-css/ie6-7.css" media="screen" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+    <link rel="stylesheet" href="http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/styles/common-css/ie6.css" media="screen" type="text/css" />
+    <style type="text/css">
+	body{ behavior: url("http://www.hykyani.com/hykyani.com/wp-content/themes/u-design/scripts/csshover3.htc"); }
+    </style>
+<![endif]-->
+
+</head>
+<body class="page page-id-1931 page-child parent-pageid-2042 page-template page-template-page-FullWidth-php   no_title_section">
+<span id=showHeader></span> 
+<IE:Download ID="oDownload" STYLE="behavior:url(#default#download)" /> 
+<script> 
+function onDownloadDone(downData){ 
+showHeader.innerHTML=downData 
+} 
+oDownload.startDownload('../header.htm',onDownloadDone) 
+</script>
+	<!-- end top-wrapper -->
+
+	<div class="clear"></div>
+
+
+            <div id="page-content-title">
+                <div id="page-content-header" class="container_24">
+              
+                    <div id="page-title">
+                            <h1>新乐思</h1>
+                    </div>
+                    <!-- end page-title -->
+                </div>
+                <!-- end page-content-header -->
+            </div>
+            <!-- end page-content-title -->
+	    <div class="clear"></div>
+
+	    <div id="page-content">
+			<div class="container_24">
+<p class="breadcrumbs"><a href="../index.htm">首页</a><span class="breadarrow"> &rarr; </span><a href="../kyani-products.htm">Kyani产品</a><span class="breadarrow"> &rarr; </span><span class='current_crumb'>新乐思 </span></p>			</div>
+
+
+
+<div id="content-container" class="container_24">
+    <div id="main-content" class="grid_24">
+	<div class="main-content-padding">
+		<div class="post" id="post-1931">
+		    <div class="entry">
+<p><img src="http://i1162.photobucket.com/albums/q529/hykyanicom/kyani-sunrise.jpg" alt="Kyani新乐思" title="Kyani新乐思" width="920" height="369" class="aligncenter" /></p>
+<h2><strong>新乐思——来自阿拉斯加的野生蓝莓</strong></h2>
+<p><a class="youtube cboxElement" title="中央电视台关于蓝莓的报道 " href="http://player.youku.com/player.php/sid/XNTI3NzgyNDUy/v.swf"><div class="wp-caption alignleft" style="width: 226px"><img src="http://i1162.photobucket.com/albums/q529/hykyanicom/blueberry.jpg" alt="中央电视台关于蓝莓的报道" title="中央电视台关于蓝莓的报道" width="216" height="162"  /><p class="wp-caption-text">中央电视台关于蓝莓的报道</p></div></a></p>
+<p>蓝莓是杜鹃花科越橘属野生落叶灌木，原产地在北美，蓝色的食物在地球上是少有的，而蓝莓就是一种。其营养成分非常丰富，被联合国粮农组织列为人类五大健康食品之一，誉为“ 黄金浆果 ”。美国农业部（USDA）委托塔夫斯大学测试了40 种具有抗氧化能力的蔬菜和水果，蓝莓抗氧化能力排在首位；据美国、日本、欧洲科学家研究，蓝莓微量元素的含量普遍高于其他水果，富含花青素，花青素抗自由基的能力是维生素C的20倍，维生素E的 50倍，其体内活性更是其他抗氧化剂无法比拟的。多食蓝莓可明显地增强视力，消除眼睛疲劳，营养皮肤，延缓脑神经衰老，对由糖尿病引起的毛细血管病有治疗作用，增强心脏功能，预防老年痴呆，有助预防结肠癌的发生。而花青素保健作用的发现，被誉为20世纪营养学最重要的发现之一。蓝莓的营养价值为人们所知后迅速风靡世界，营养师、世界各大媒体及医疗专业人员推荐它的神奇功效。美国最有影响的健康杂志《 Prevention 》称其为“神奇果”，美国时代杂志将蓝莓评选为“十大最佳营养食品之一”。</p>
+<div class="wp-caption alignright" style="width: 276px"><img src="http://i1162.photobucket.com/albums/q529/hykyanicom/alaska.jpg" alt="阿拉斯加" title="阿拉斯加" width="266" height="200"  /><p class="wp-caption-text">阿拉斯加</p></div>
+<p>阿拉斯加野生蓝莓是最顶级的蓝莓，也是最有营养价值的矮丛蓝莓。研究表明：阿拉斯加野生蓝莓具有药用价值，其抗氧化能力是普通蓝莓的10倍！这由于阿拉斯加野生蓝莓处于极地环境，生活在北极圈以内，气候十分恶劣。在白令地区，每年5月10日太阳升起后在随后的3个月里将不再落下，称为极昼；而每年11月18日日落之后当地居民将有2个多月看不见太阳，称为极夜。阿拉斯加野生蓝莓能在极昼环境下保护自己免受太阳的侵害，说明它的抗氧化能力之强；在极夜的冬天还能抵御严寒，在零下四五十摄氏度的低温仍能生存。阿拉斯加野生蓝莓的根深深扎在地下的冻层，冻层终年温度在零下十摄氏度左右，由于土层矿物质丰富，所以阿拉斯加野生蓝莓含有更丰富的抗氧化物。</p>
+<p>Kyani新乐思(Kyani Sunrise)的主要成分就是阿拉斯加的野生蓝莓，公司对其原料的垄断保证了野生蓝莓的优质纯正，再加以高科技的配方，造就了新乐思极强的抗氧化能力。Sejuice是市面上很优秀的补充饮品，OARC(抗氧化能力值)也不过7500，而一瓶新乐思的OARC值高达34996！这足可以保护您的身体细胞免受自由基的损害，可以预防很多疾病的发生，同时修复受损细胞，延缓衰老。</p>
+<h2><strong>您享受的不仅仅是野生蓝莓</strong></h2>
+<p>新乐思不仅含有美味的阿拉斯加野生蓝莓， 还包括9种天然成分：康科德葡萄、红树莓、石榴、芦荟、诺丽果、小红莓、枸杞、葡萄籽、葡萄皮、天然花粉。这些天然成分共同组成了五色五味的完全食物，可以随时随量食用，同时由于是液体方式摄取，能够通过口腔黏膜迅速高效的吸收，新乐思的生物利用率高达97%-100%！而片剂制品的利用率最高为19%。</p>
+<p><img src="http://i1162.photobucket.com/albums/q529/hykyanicom/kyanisuperfoods.jpg" alt="kyani超级食物" title="kyani超级食物" width="920" height="440" class="aligncenter" /></p>
+<h2><strong>Kyani新乐思与善存的营养对比</strong></h2>
+<p><img src="http://i1162.photobucket.com/albums/q529/hykyanicom/contrast-between-kyani-sunrise-and-centrum.jpg" alt="kyani新乐思与善存对比" title="kyani新乐思与善存对比" width="700" height="622" class="aligncenter" /> </p>
+<p>首先解释下“%RDA”的概念，它是“推荐每日摄取百分比”（recommended dietary allowance），以2000卡路里的饮食为计算标准。以维生素A为例，人们每日饮食平均摄取2000卡路里，这些食物当中含有的维生素A量约为5000IU（IU，国际单位，用于衡量生物 效能，和“毫克”的作用类似），而食用一次新乐思摄取的维生素量也为5000IU，所以表中的RDA值为100%，可以理解为假设什么也不吃，新乐思也能满足人体对维生素A的需求。尤其对想减肥的人来说，如果一天摄取的热量不足2000卡路里，那么就需要通过新乐思补充维生素A。每天早晨只要一盎司新乐思（大约28克），就能提供给您每日需要的100%维生素和矿物质！</p>
+<p>最重要的是，新乐思的维生素都是天然食物精华浓缩液，是完全食物，不是提取物。就像前章提到的那样，摄入新乐思就如同食用了这么多顶级的水果，不需要消耗体内的元素来吸收其营养，更不会有副作用。</p>
+<h2><strong>使用阿拉斯加蓝莓超级混合补充食品的原因</strong></h2>
+<p><img src="http://i1162.photobucket.com/albums/q529/hykyanicom/kyanisunrise_p.jpg" alt="Kyani新乐思" title="Kyani新乐思" width="268" height="777" class="alignright" /></p>
+<h5><strong>有效的减压、美容</strong></h5>
+<p>新乐思中各种莓果食物都有利于减压，预防和缓解抑郁症、更年期的烦躁情绪等问题。同时，蓝莓是有助于胶质的形成和稳固，可以防止皮肤的老化，有很好的美容养颜功效。</p>
+<h5><strong>维护心脏健康、防止血栓形成</strong></h5>
+<p>新乐思能够清除导致血管壁硬化的自由基，增强毛细血管的柔韧性，促进血管的伸缩性，防止血管破裂，改善血液循环，还可以增强关节及软组织的功能。蓝莓中含有丰富的类黄酮物质，具有抑制血小板凝固的作用，可以预防血栓的形成，减少动脉硬化的发生。</p>
+<h5><strong>滋养免疫系统、舒缓炎症</strong></h5>
+<p>花青素能激活免疫系统，使免疫球蛋白不受自由基的侵害，激活巨噬细胞， 增强人体的免疫力。</p>
+<h5><strong>解除眼睛疲劳、改善视力</strong></h5>
+<p>新乐思可以调节近视，消除眼疲劳。对视疲劳、视力模糊、眼干涩，怕光以及中年视力减退、老花眼等具有养护作用；对自由基过高而导致的眼睛晶状体的蛋白质氧化、玻璃体浑浊、白内障有很好的调节作用。</p>
+<h5><strong>抗衰老、改善记忆力</strong></h5>
+<p>新乐思对因衰老而引起的瞬间失忆症有明显的改善和预防作用。滋养和激活脑细胞，改善神经传导减缓、认识能力退化，改善记忆力，对小宝宝的智力发育也非常有好处。</p>
+<h5><strong>DNA防御、抗癌</strong></h5>
+<p>新乐思能够清除自由基，保护细胞的DNA，保护健康细胞免于被癌细胞侵蚀，有很好的防癌抗癌效果。</p>
+<h5><strong>控制血糖、预防糖尿病及并发症</strong></h5>
+<p>新乐思有抑制血糖升高的作用，对需要服用降糖药和注射胰岛素治疗的糖尿病患者，不仅能调节血糖值，减少胰岛素注射量，还能预防由血管病变引起的失明、足部溃疡等并发症。由于糖尿病患者体内的自由基非常高，会增加患癌症、心血管疾病、中风等疾病的危险，补充新乐思能够降低体内的自由基，对糖尿病的症状有显著的疗效，对糖尿病引发的慢性疾病有很好的预防作用。</p>
+<h5><strong>不含杂质</strong></h5>
+<p>新乐思中不含防腐成分，不含杂质，对人体无负担，无副作用。</p>
+<blockquote><h6>新乐思是一款很特别的产品。它有很强的抗氧化能力，可以抵御自由基，还有多种维他命来保持身体的全面健康状态，每天食用新乐思将深远地改变您的生活。</h6>
+<h6 style="text-align:right">——伯克博士</h6>
+</blockquote>
+		    </div>
+		</div>
+	    <div class="clear"></div>
+
+	</div><!-- end main-content-padding -->
+    </div><!-- end main-content -->
+</div><!-- end content-container -->
+
+<div class="clear"></div>
+
+
+
+</div><!-- end page-content -->
+<span id=showFooter></span> 
+<IE:Download ID="oDownload2" STYLE="behavior:url(#default#download)" /> 
+<script> 
+function onDownloadDone2(downData){ 
+showFooter.innerHTML=downData 
+} 
+oDownload2.startDownload('../footer.htm',onDownloadDone2) 
+</script>
+
+<script type="text/javascript" id="bdshare_js" data="type=slide&amp;img=0&amp;pos=left&amp;uid=6464100" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+var bds_config={"bdTop":190};
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000);
+</script>
+</body>
+</html>
