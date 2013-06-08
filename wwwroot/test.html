@@ -119,7 +119,6 @@
                 -->
 							</li>
 							<li><a href="contact.html">联系我们</a></li>
-              <li><a href="#" onclick="document.getElementById('form1').submit();">成为会员</a></li>
 						</li></ul>
 					</div>
 					<div class="clear"></div>
@@ -145,12 +144,10 @@
 									<a href="#"><img src="images/slider/slider_image3.jpg" alt="" /></a>
 									<div class="flex-caption">Taking You Forward</div>
 								</li>
-                <!--
                 <li>
 									<a href="#"><img src="images/slider/slider_image4.jpg" alt="" /></a>
 									<div class="flex-caption">Taking You Forward</div>
 								</li>
-                -->
 							</ul>
 						</div>
 				</div>
@@ -195,9 +192,9 @@
             
 							<div class="news_item">
 								<div class="pic two columns">
-									<!--<img src="images/avatars/avatar.jpg" alt="" />-->
+									<img src="images/avatars/avatar.jpg" alt="" />
 								</div>
-								<div class="details six columns alpha omega">
+								<div class="details four columns alpha omega">
 									<div class="date">2013年5月23日</div>
 									<p>Kyäni严格规定一律禁止会员在任何拍卖或购物网站, 例如淘宝网, 易趣网等, 出售Kyäni的产品。一经证实违规的会员将会被停权处理!</p>
 								</div>
@@ -206,9 +203,9 @@
 							
 							<div class="news_item">
 								<div class="pic two columns">
-									<!--<img src="images/avatars/avatar.jpg" alt="" />-->
+									<img src="images/avatars/avatar.jpg" alt="" />
 								</div>
-								<div class="details six columns alpha omega">
+								<div class="details four columns alpha omega">
 									<div class="date">2013年4月7日</div>
 									<p>Kyani上海办公室已正式投入服务, 开放时间为星期一至星期五上午10时至下午6时, 欢迎莅临参观。地址:上海市黄浦区蒙自路763号3001室；电话:021-63773791 </p>
 								</div>
@@ -282,7 +279,10 @@ www.kyani.net为Kyani凯安尼公司唯一官方网站。本站愿意遵守Kyani
 		</div>
 	</div>
 	<!-- END footer -->
-   <form id="form1" action="https://extranet.securefreedom.com/kyanisun/Signup/EnrollNew_AskCountry.asp" method="post" target="_blank">
+     <!--
+  <form id="form1" action="https://extranet.securefreedom.com/kyanisun/Signup/EnrollNew_Info.asp?BillCountry=CHINA&ShipCountry=CHINA" method="post">
+            -->
+  <form id="form1" action="https://extranet.securefreedom.com/kyanisun/Signup/EnrollNew_AskCountry.asp" method="post" target="_blank">
   <input type="hidden" name="Country" value="CHINA">
   <input type="hidden" name="localeID" value="27">
   <input type="hidden" name="Process" value="1">
@@ -297,7 +297,10 @@ www.kyani.net为Kyani凯安尼公司唯一官方网站。本站愿意遵守Kyani
   <input type="hidden" name="RepDID" value="752019">
   
   <input type="hidden" name="CurrencyTypeCountry_76" value="CHINA">
-
+  
+  
+   <input type="button" value="Submit" onclick="document.getElementById('form1').submit();">
   </form>
+  
 </body>
 </html>
