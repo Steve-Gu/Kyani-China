@@ -46,8 +46,8 @@ h1, h2, h3, h4, h5, h6 { font-family:"PT Sans", Arial, Tahoma; color:#4c4c4c; }
 
 /* #HEADER
 ================================================== */
-.main .phone { float:left; padding-top:15px; font-size:15px; color:#fff; font-family:"PT Sans",Arial; }
-.main .social { float:right; height:30px; padding-top:9px; }
+.main .phone { float:left; padding-top:15px; font-size:18px; color:#fff; font-family:"PT Sans",Arial; }
+.main .social { float:right; height:30px; padding-top:15px; font-size:18px;}
 .main .social a {  float:left;display:block; width:30px; height:30px; }
 .main .social a.twitter { background:url(../images/twitter.png); margin-right:5px; }
 .main .social a.rss { background:url(../images/rss.png);  }
