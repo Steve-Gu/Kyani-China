@@ -12,6 +12,7 @@
 	<title>Kyani凯安尼 - 带给您健康自由的美好人生！</title>
 	<meta name="description" content="" />
 	<meta name="author" content="" />
+  <meta http-equiv="Cache-Control" content="max-age=600"/>
 
 	<!-- Mobile Specific Metas
   ================================================== -->
@@ -20,7 +21,6 @@
 	<!-- CSS
   ================================================== -->
 	<link rel="stylesheet" href="css/style.css" />
-
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
@@ -36,11 +36,18 @@
 	================================================== -->
 	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
 	<script src="js/superfish.js"></script>
-	<script src="js/selectnav.js"></script>
+	<script src="js/jquery.flexslider.js"></script>
 	<script src="js/jquery.tweet.js"></script>
+	<script src="js/selectnav.js"></script>
 	<script src="js/jquery.fancybox.js"></script>
 	<script src="js/functions.js"></script>
-
+	<script>
+		$(document).ready(function() {
+			$(".slider .flexslider").flexslider({
+				animation: "slide"
+			});
+		});
+	</script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
 <body>
 
@@ -55,8 +62,9 @@
 				<div class="sixteen columns header">
 					<div class="phone"><strong>凯安尼中国推广网站</strong></div>
 					<div class="social">
-              <strong style="font-size:15px">健康财富专线:15221576762</strong>              
+              <strong>健康财富专线:15221576762</strong>              
 					</div>
+          <div class="phone"></div>
 				</div>
 				<div class="clear"></div>
 				<div class="des"></div>
@@ -66,8 +74,9 @@
 					<div class="logo four columns alpha"></div>
 					<div class="navigation twelve columns alpha omega">
 						<ul id="nav" class="sf-menu sf-shadow" >
-							<li><a  href="index.html">首页</a></li>
-							<li  >
+              <li><!--ONELEVEMENU-首页-->
+              <a href="index.html">首页</a></li>
+							<li><!--ONELEVEMENU公司-->
 								<a href="#">公司</a>
                 
 								<ul>
@@ -76,9 +85,8 @@
 									<li><a href="development-of-company.html">公司发展</a></li>
 									<li><a href="caring-hands.html">全球慈善</a></li>
 								</ul>
-							        
-							<li class="active">
-                
+							         
+							<li class="active"><!--ONELEVEMENU-产品-->
 								<a href="#">产品</a>
                 
 								<ul>
@@ -98,12 +106,12 @@
 											<li><a href="blueberry.html">蓝莓</a></li>
                       <li><a href="nitric-oxide.html">一氧化氮</a></li>                      
                     </ul>
-								  </li>                  
+								  </li>
 								</ul>
                 
 							</li>
-							<li>
-								<a href="#">商机</a>
+							<li><!--ONELEVEMENU-见证-->
+								<a href="kyani-health-testimonials.html">见证</a>
                 <!--
 								<ul>
 									<li><a href="blog.html">Blog Layout</a></li>
@@ -111,14 +119,15 @@
 								</ul>
                 -->
 							</li>
-							<li><a href="contact.html">联系我们</a></li>
+							<li><!--ONELEVEMENU-联系我们-->
+              <a href="contact.html">联系我们</a></li>
+              <li><a href="#" onclick="document.getElementById('form1').submit();">成为会员</a></li>
 						</li></ul>
 					</div>
 					<div class="clear"></div>
 					<div id="separator"><span></span></div> 
-					
-				</div>
-<!--ENDOFHEADER-->        
+				</div>        
+<!--ENDOFHEADER-->                
 				<div class="clear"></div>
 				
 				
