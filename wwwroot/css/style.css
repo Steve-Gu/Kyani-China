@@ -288,6 +288,7 @@ background-position:right 5px bottom 6px;
 /* go to top */
 a#goto_top { position:absolute; bottom:-19px; right:10px; display:block; width:53px; height:45px; background:url(../images/goto_top.png); }
 
+a.goto_top { display:block; width:53px; height:45px; background:url(../images/goto_top.png); float:right}
 
 /* #FOOTER
 ================================================== */
