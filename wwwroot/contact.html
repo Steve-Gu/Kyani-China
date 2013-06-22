@@ -122,7 +122,7 @@
 							</li>
 							<li class="active"><!--ONELEVEMENU-联系我们-->
               <a href="contact.html">联系我们</a></li>
-              <li><a href="#" onclick="document.getElementById('form1').submit();">成为会员</a></li>
+              <!--<li><a href="#" onclick="document.getElementById('form1').submit();">成为会员</a></li>-->
 						</li></ul>
 					</div>
 					<div class="clear"></div>
@@ -153,28 +153,58 @@
 						
 						<form id="form_contact" method="post" action="sendmessage.php" />
 						<div class="two columns alpha">
-							姓名:<br />
-							<input type="text" id="name" name="name" />
+							<em style="color:red;">*</em>&nbsp;&nbsp;姓名:<br />
+							<input type="text" id="name" name="leave_name" />
 						</div>
             <div class="three columns">
-							电话:<br />
-							<input type="text" id="email" name="tel" />
+							<em style="color:red;">*</em>&nbsp;&nbsp;电话:<br />
+							<input type="text" id="email" name="leave_tel" />
 						</div>
 						<div class="three columns">
 							电子邮件:<br />
-							<input type="text" id="email" name="email" />
+							<input type="text" id="email" name="leave_email" />
 						</div>
 						
 						<div class="eight columns alpha">
-							留言内容:<br />
-							<textarea cols="300" rows="8" id="text" name="text"></textarea>
-							<input type="button" class="button green" id="contact_send" value="发送" style="font-size:15px"/>
+							<em style="color:red;">*</em>&nbsp;&nbsp;留言内容:<br />
+							<textarea cols="300" rows="8" id="text" name="leave_text"></textarea>
+							<input type="button" class="button green" id="contact_send" value="发送" onclick="sendMessage();" style="font-size:15px"/>
 						</div>
 						</form>
 						
 						
 					</div>
-					
+<script>
+function sendMessage() {
+  if (isEmpty(document.getElementsByName("leave_name")[0].value)) {
+    alert("请填写您的姓名！");
+    return;
+  }
+  if(isEmpty(document.getElementsByName("leave_tel")[0].value)) {
+    alert("请填写您的电话！");
+    return;
+  }
+  // alert(document.getElementsByName("leave_email")[0].value == ""));
+  if (isEmpty(document.getElementsByName("leave_text")[0].value)) {
+    alert("请填写您的留言！");
+    return;
+  }
+  $.ajax({
+    type: "POST",
+    url: "sendmessage.php",
+    data: {leave_name: document.getElementsByName("leave_name")[0].value, 
+    leave_tel: document.getElementsByName("leave_tel")[0].value, 
+    leave_email:document.getElementsByName("leave_email")[0].value, 
+    leave_text: document.getElementsByName("leave_text")[0].value}
+  }).done(function( msg ) {
+    alert(msg);
+});
+
+}
+function isEmpty(val){
+    return (val === undefined || val == null || /^\s*$/.test(val)) ? true : false;
+}
+</script>					
 					<div class="contact_details six columns omega">
 						 <div id="bottom-bg">
 		<div id="bottom" class="container_24">
